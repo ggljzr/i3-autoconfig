@@ -1,0 +1,3 @@
+[paths]
+i3config = "~/.i3/config"
+xresources = "~/.Xresources"

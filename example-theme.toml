@@ -1,0 +1,47 @@
+name = "Example theme (forest)"
+
+[colors]
+black = "#212121"
+darkGrey = "#545454"
+
+darkRed = "#955252"
+red = "#BD6B6B"
+
+darkGreen = "#7A8A5D"
+green = "#A1B67B"
+
+darkYellow = "C49D4E"
+yellow = "FFCC66"
+
+darkBlue = "#61878B"
+blue = "#60B1B7"
+
+darkMagenta = "#7C5971"
+magenta = "#A77899"
+
+darkCyan = "#679787"
+cyan = "#7CB6A3"
+
+lightGrey = "#f0f0f0"
+white = "fff4e8"
+
+background = "#212121"
+foreground = "#fff4e8"
+
+[i3]
+
+border = 4
+gaps-inner = 16
+gaps-outer = 0
+    
+    [windows]
+    focused = "darkGreen"
+    inactive = "black"
+    unfocused = "black"
+    urgent = "darkRed"
+    foreground = "white"
+
+[other]
+font = "Terminus"
+font-size = 10
+wallpaper = /home/ggljzr/Pictures/bird.jpg
