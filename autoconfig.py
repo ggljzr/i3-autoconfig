@@ -84,8 +84,7 @@ gaps_outer = theme['i3']['gaps-outer']
 if gaps_inner == 0 and gaps_outer == 0:
     
     #remove i3gaps calls
-    subprocess.call(['sed', '-i', 's/gaps_inner/##/g', 'i3config.temp'])
-    subprocess.call(['sed', '-i', 's/gaps_outer/##/g', 'i3config.temp'])
+    subprocess.call(['sed', '-i', 's/gaps/##/g', 'i3config.temp'])
     
     if border != 0:
         #subprocess.call(['sed', '-i', 's/##border##/{}'.format(border), 'i3config.temp'])

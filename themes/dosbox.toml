@@ -1,0 +1,48 @@
+name = "Dosbox"
+
+[colors]
+black = "#000000"
+darkGrey = "#555555"
+
+darkRed = "#CD0000"
+red = "#FF0000"
+
+darkGreen = "#00CD00"
+green = "#00FF00"
+
+darkYellow = "#CDCD00"
+yellow = "#FFFF00"
+
+darkBlue = "#4682B4"
+blue = "#1E90FF"
+
+darkMagenta = "#CD00CD"
+magenta = "#FF00FF"
+
+darkCyan = "#00CDCD"
+cyan = "#00FFFF"
+
+lightGrey = "#999999"
+white = "#ffffff"
+
+background = "#000000"
+foreground = "#ffffff"
+
+[i3]
+
+border = 0
+gaps-inner = 0
+gaps-outer = 0
+    
+    [i3.windows]
+    focused = "#285577"
+    inactive = "darkGrey"
+    unfocused = "darkGrey"
+    urgent = "darkRed"
+    foreground = "white"
+
+[other]
+font = "Terminus"
+font-size = 10
+wallpaper = "/home/ggljzr/Pictures/win95.png"
+shadows = "none" #mild, thick or none
