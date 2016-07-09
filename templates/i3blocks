@@ -29,18 +29,18 @@ separator_block_width=15
 markup=none
 
 [music]
-color=##color1##
+color=##darkRed##
 command=exec mpc current
 interval=5
 
 [weather]
-color=##color12##
+color=##blue##
 command=exec python ~/.i3/weatherBar.py -s
 interval=1800
 markup=pango
 
 [memory]
-color=##color10##
+color=##green##
 label=Mem
 #label=  
 separator=false
@@ -48,26 +48,26 @@ interval=30
 
 [disk]
 label=Home
-color=##color10##
+color=##green##
 #label= 
 #instance=/mnt/data
 interval=30
 
 [battery]
-color=##color13##
+color=##magenta##
 label=Batt
 #label= 
 interval=30
 
 [brightness]
-color=##color11##
+color=##yellow##
 interval=1
 label=Shine
 #label=  
 command= printf %.0f `xbacklight -get`
 
 [volume]
-color=##color9##
+color=##red##
 label=Vol
 #label=  
 instance=Master
@@ -75,7 +75,7 @@ interval=1
 signal=10
 
 [keyboard layout]
-color=##color14##
+color=##cyan##
 label=
 command= setxkbmap -query | awk '/layout/{print $2}'
 interval=1
@@ -88,7 +88,7 @@ interval=1
 markup=pango
 
 [time]
-color=##fore##
+color=##foreground##
 command=LC_TIME=en_US date '+%A %B %d %H:%M'
 interval=50
 

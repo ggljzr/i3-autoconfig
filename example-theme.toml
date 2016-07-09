@@ -10,8 +10,8 @@ red = "#BD6B6B"
 darkGreen = "#7A8A5D"
 green = "#A1B67B"
 
-darkYellow = "C49D4E"
-yellow = "FFCC66"
+darkYellow = "#C49D4E"
+yellow = "#FFCC66"
 
 darkBlue = "#61878B"
 blue = "#60B1B7"
@@ -23,7 +23,7 @@ darkCyan = "#679787"
 cyan = "#7CB6A3"
 
 lightGrey = "#f0f0f0"
-white = "fff4e8"
+white = "#fff4e8"
 
 background = "#212121"
 foreground = "#fff4e8"
@@ -45,3 +45,4 @@ gaps-outer = 0
 font = "Terminus"
 font-size = 10
 wallpaper = "/home/ggljzr/Pictures/bird.jpg"
+shadows = "mild" #mild, thick or none

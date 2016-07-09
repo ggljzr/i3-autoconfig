@@ -16,20 +16,20 @@ xterm*scrollBar: false
 ! rofi config
 rofi.font: ##font_family## ##font_size##
 
-rofi.hlfg: ##foreground##
-rofi.hlbg: ##darkGreen##
+rofi.hlfg: ##fore##
+rofi.hlbg: ##color2##
 
-rofi.fg-active: ##blue##
-rofi.bg-active: ##background##
+rofi.fg-active: ##color12##
+rofi.bg-active: ##bckg##
 
-rofi.hlfg-active: ##foreground##
-rofi.hlbg-active: ##darkBlue##
+rofi.hlfg-active: ##fore##
+rofi.hlbg-active: ##color4##
 
-rofi.fg-urgent: ##red##
-rofi.bg-urgent: ##background##
+rofi.fg-urgent: ##color9##
+rofi.bg-urgent: ##bckg##
 
-rofi.hlfg-urgent: ##foreground##
-rofi.hlbg-urgent: ##darkRed##
+rofi.hlfg-urgent: ##fore##
+rofi.hlbg-urgent: ##color1##
 
 
 
