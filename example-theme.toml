@@ -34,7 +34,7 @@ border = 4
 gaps-inner = 16
 gaps-outer = 0
     
-    [windows]
+    [i3.windows]
     focused = "darkGreen"
     inactive = "black"
     unfocused = "black"
@@ -44,4 +44,4 @@ gaps-outer = 0
 [other]
 font = "Terminus"
 font-size = 10
-wallpaper = /home/ggljzr/Pictures/bird.jpg
+wallpaper = "/home/ggljzr/Pictures/bird.jpg"

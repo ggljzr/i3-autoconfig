@@ -16,28 +16,28 @@ xterm*scrollBar: false
 ! rofi config
 rofi.font: ##font_family## ##font_size##
 
-rofi.hlfg: ##fore##
-rofi.hlbg: ##color2##
+rofi.hlfg: ##foreground##
+rofi.hlbg: ##darkGreen##
 
-rofi.fg-active: ##color12##
-rofi.bg-active: ##bckg##
+rofi.fg-active: ##blue##
+rofi.bg-active: ##background##
 
-rofi.hlfg-active: ##fore##
-rofi.hlbg-active: ##color4##
+rofi.hlfg-active: ##foreground##
+rofi.hlbg-active: ##darkBlue##
 
-rofi.fg-urgent: ##color9##
-rofi.bg-urgent: ##bckg##
+rofi.fg-urgent: ##red##
+rofi.bg-urgent: ##background##
 
-rofi.hlfg-urgent: ##fore##
-rofi.hlbg-urgent: ##color1##
+rofi.hlfg-urgent: ##foreground##
+rofi.hlbg-urgent: ##darkRed##
 
 
 
 ! terminal colors ------------------------------------------------------------
 
 ! tangoesque scheme
-*background: ##bckg##
-*foreground: ##fore##
+*background: ##background##
+*foreground: ##foreground##
 ! Black (not tango) + DarkGrey
 *color0:  ##black##
 *color8:  ##darkGrey##
