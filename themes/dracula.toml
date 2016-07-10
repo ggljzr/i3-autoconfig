@@ -1,0 +1,65 @@
+name = "dracula"
+#https://github.com/dracula/dracula-theme
+
+
+[colors]
+black = "#23242F"
+darkGrey = "#5a5e77"
+
+darkRed = "#FF3D3D"
+red = "#FF5555"
+
+darkGreen = "#39F969"
+green = "#50FA7B"
+
+darkYellow = "#FFB86C"
+yellow = "#F1FA8C"
+
+darkBlue = "#6272A4"
+blue = "#8491B8"
+
+darkMagenta = "#BD93F9"
+magenta = "#FF79C6"
+
+darkCyan = "#55DFFC"
+cyan = "#8BE9FD"
+
+lightGrey = "#f0f0f0"
+white = "#f8f8f2"
+
+background = "#23242F"
+foreground = "#f8f8f2"
+
+
+#this can be ommitted
+#then it defaults to
+#border = 0
+#gaps-inner, gaps-outer = 0
+[i3]
+
+border = 4
+gaps-inner = 16
+gaps-outer = 0
+    
+    #this can also be ommitted
+    #or only some options can be ommitted
+    [i3.windows]
+    focused = "darkGreen"
+    inactive = "black"
+    unfocused = "black"
+    urgent = "darkRed"
+    foreground = "black"
+
+#firefox options can also be ommited
+#[firefox]
+#foreground = "#005500"
+#background = "white"
+#urlbar = "darkRed"
+#toolbar = "#ff0000"
+#tabselect = "#00ff88"
+
+[other]
+font = "Terminus"
+font-size = 10
+wallpaper = "/home/ggljzr/Pictures/win95.png"
+shadows = "mild" #mild, thick or none
