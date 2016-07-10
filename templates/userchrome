@@ -15,7 +15,7 @@
 }
 /*
 #identity-icon-label {
-color : ##fore##;
+color : ##ff_foreground##;
 background-color : #7F686B;
 border: none !important;
 margin: 0 0 0 0 !important;
@@ -55,10 +55,10 @@ toolbar {
     padding-top: 0px !important;
     margin-bottom: -1px !important;
     border-style: solid !important;
-    border-color: ##special1## !important;
+    border-color: ##ff_toolbar## !important;
     border-radius: 0px !important;
-    background: ##special1## !important;
-    color: ##fore## !important;
+    background: ##ff_toolbar## !important;
+    color: ##ff_foreground## !important;
 }
 
 
@@ -68,10 +68,10 @@ toolbar {
     padding-top: 0px !important;
     margin-bottom: 0px !important;
     border-style: solid !important;
-    border-color: ##color4## !important;
+    border-color: ##ff_urlbar## !important;
     border-radius: 0px !important;
-    background: ##color4## !important;
-    color: ##color15## !important;
+    background: ##ff_urlbar## !important;
+    color: ##ff_foreground## !important;
     font-size: 11pt !important;
     font-family: ##font_family## !important;
 }
@@ -81,7 +81,7 @@ toolbar {
 }
 
 #tabbrowser-tabs tab .tab-close-button {
-	color : ##fore## !important;
+	color : ##ff_foreground## !important;
 }
 
 #TabsToolbar .tab-background-start,
@@ -96,27 +96,27 @@ toolbar {
  
 
 #TabsToolbar .tabs-newtab-button:hover {
-    background: ##color10## !important;
-    color: ##fore## !important;
+    background: ##green## !important;
+    color: ##ff_foreground## !important;
     transition: all .4s !important;
     border: none !important;
 }
  
 #TabsToolbar .tabs-newtab-button {
     background: none !important;
-    color: ##fore## !important;
+    color: ##ff_foreground## !important;
     transition: all .4s !important;
     border: none !important;
 }
 
 #TabsToolbar .tab-background[selected] {
-    background: ##special1## !important;
+    background: ##ff_toolbar## !important;
     border: none;
    
 }
 .tabbrowser-tabs:not([drag=detach]) > .tabbrowser-tab:not([pinned])[fadein] {
  
-    background: ##fore## !important;
+    background: ##ff_foreground## !important;
 }
   #TabsToolbar .tabbrowser-tabs {
     transition: all .4s !important;
@@ -126,7 +126,7 @@ toolbar {
      border: none !important;
      border-radius: 0 !important;
      /*background : none !important*/
-     background-color: ##bckg## !important;
+     background-color: ##ff_background## !important;
     -moz-border-top-colors: none !important;
     -moz-border-left-colors: none !important;
     -moz-border-right-colors: none !important;
@@ -134,7 +134,7 @@ toolbar {
 }
 
 #TabsToolbar .tabbrowser-tab:not([selected]) {
-    color: ##fore## !important;
+    color: ##ff_foreground## !important;
     border : none !important;
     border-radius : 0 !important;
     background: none !important;
@@ -144,10 +144,10 @@ toolbar {
 }
 
 #TabsToolbar .tabbrowser-tab[selected] {
-    color: ##fore## !important;
+    color: ##ff_foreground## !important;
     border : none !important;
     border-radius : 0 !important;
-    background: ##special1## !important;
+    background: ##ff_toolbar## !important;
     background-clip: initial !important;
     margin-bottom: 0 !important;
     border: none;
@@ -155,8 +155,8 @@ toolbar {
    
 #TabsToolbar .tabbrowser-tab:hover:not([selected]) {
 transition: all .4s !important;
-    color: ##fore## !important;
-    background-color: ##color12## !important; 
+    color: ##ff_foreground## !important;
+    background-color: ##ff_tabselect## !important; 
     border : none !important;
     border-radius : 0 !important;
     background-clip: initial !important;

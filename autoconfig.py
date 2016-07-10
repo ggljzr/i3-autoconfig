@@ -13,16 +13,32 @@ def sedw(placeholder, new_string, filename):
     return subprocess.call(['sed', '-i', 's@##{}##@{}@g'.format(placeholder,new_string), filename])
 
 
-COLORS = ['black', 'darkGrey', 'darkRed', 'red', 'darkGreen', 'green', 
-        'darkYellow', 'yellow', 'darkBlue', 'blue', 'darkMagenta', 'magenta', 
+COLORS = ['black', 'darkGrey', 'darkRed', 'red', 'darkGreen', 'green',
+        'darkYellow', 'yellow', 'darkBlue', 'blue', 'darkMagenta', 'magenta',
         'cyan', 'darkCyan', 'lightGrey', 'white', 'foreground', 'background']
 
-I3_WINDOWS = ['focused', 'inactive', 'unfocused', 'urgent', 'foreground']
+#tuples with default values
+I3_WINDOWS = [
+        ('focused', 'darkGreen'), 
+        ('inactive', 'darkGrey'), 
+        ('unfocused', 'darkGrey'), 
+        ('urgent', 'darkRed'), 
+        ('foreground', 'foreground')]
 
-TEMPLATES = ['i3config', 'xresources', 'i3blocks']
+FF_OPTIONS = [
+        ('foreground', 'foreground'),
+        ('background', 'background'), 
+        ('urlbar', 'darkBlue'), 
+        ('toolbar', 'darkGrey'), 
+        ('tabselect', 'blue')
+        ]
+
+TEMPLATES = ['i3config', 'xresources', 'i3blocks', 'userchrome']
 
 #shadow presets for compton
 SHADOWS = ['mild', 'thick', 'none']
+
+color_pattern = re.compile(r'^#[a-fA-F0-9]{6}$')
 
 with open('config.toml', 'rb') as config_file:
     config = toml.load(config_file)
@@ -51,41 +67,50 @@ for template in TEMPLATES:
     print(template_name)
     print("")
 
-
     #create temp file
     subprocess.call(['cp', template_path, template_name])
 
     for color in COLORS:
         color_val = theme['colors'][color]
-        #print("{} : {}".format(color, color_val)) 
+        #print("{} : {}".format(color, color_val))
         #subprocess.call(['sed', '-i', 's/##{}##/{}/g'.format(color, color_val), template_name])
         sedw(color, color_val, template_name)
 
 #additional i3 config block
 #i3 windows conf
 for window in I3_WINDOWS:
-    color = theme['i3']['windows'][window]
-    color_pattern = re.compile(r'^#[a-fA-F0-9]{6}$') 
+
+    try:
+        color = theme['i3']['windows'][window[0]]
+    #if i3 options are ommitted defaults
+    except KeyError:
+        color = window[1]
 
     if color_pattern.match(color):
         color_val = color
     else:
         color_val = theme['colors'][color]
-    
-    print("{} {} {}".format(window, color, color_val))
+
+    print("i3 window {} {} {}".format(window[0], color, color_val))
     #subprocess.call(['sed', '-i', 's/##i3_{}##/{}/g'.format(window, color_val), 'i3config.temp'])
-    sedw('i3_' + window, color_val, 'i3config.temp')
+    sedw('i3_' + window[0], color_val, 'i3config.temp')
 
 #gaps conf
-border = theme['i3']['border']
-gaps_inner = theme['i3']['gaps-inner']
-gaps_outer = theme['i3']['gaps-outer']
+
+try:
+    border = theme['i3']['border']
+    gaps_inner = theme['i3']['gaps-inner']
+    gaps_outer = theme['i3']['gaps-outer']
+except KeyError:
+    border = 0
+    gaps_inner = 0
+    gaps_outer = 0
 
 if gaps_inner == 0 and gaps_outer == 0:
-    
+
     #remove i3gaps calls
     subprocess.call(['sed', '-i', 's/gaps/##/g', 'i3config.temp'])
-    
+
     if border != 0:
         #subprocess.call(['sed', '-i', 's/##border##/{}'.format(border), 'i3config.temp'])
         sedw('border', border, 'i3config.temp')
@@ -103,6 +128,25 @@ for template in TEMPLATES:
 
 #wallpaper
 sedw('wallpaper', theme['other']['wallpaper'], 'i3config.temp')
+
+print("")
+
+#firefox userchrome config
+#if any option missing, default setting is applied
+#DRY 1. strike (see i3 windows config)
+for option in FF_OPTIONS:
+    try:
+        color = theme['firefox'][option[0]]
+    except KeyError:
+        color = option[1]
+
+    if color_pattern.match(color):
+        color_val = color
+    else:
+        color_val = theme['colors'][color]
+
+    print("ff option {} {} {}".format(option[0], color, color_val))
+    sedw('ff_' + option[0], color_val, 'userchrome.temp')
 
 #coping temp files to their targets
 for template in TEMPLATES:

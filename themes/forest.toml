@@ -28,18 +28,33 @@ white = "#fff4e8"
 background = "#212121"
 foreground = "#fff4e8"
 
+
+#this can be ommitted
+#then it defaults to
+#border = 0
+#gaps-inner, gaps-outer = 0
 [i3]
 
 border = 4
 gaps-inner = 16
 gaps-outer = 0
     
+    #this can also be ommitted
+    #or only some options can be ommitted
     [i3.windows]
     focused = "darkGreen"
     inactive = "black"
     unfocused = "black"
     urgent = "darkRed"
     foreground = "white"
+
+#firefox options can also be ommited
+#[firefox]
+#foreground = "#005500"
+#background = "white"
+#urlbar = "darkRed"
+#toolbar = "#ff0000"
+#tabselect = "#00ff88"
 
 [other]
 font = "Terminus"

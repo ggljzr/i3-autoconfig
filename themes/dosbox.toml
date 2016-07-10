@@ -41,6 +41,13 @@ gaps-outer = 0
     urgent = "darkRed"
     foreground = "white"
 
+[firefox]
+toolbar = "#DCDAD5"
+urlbar = "#285577"
+foreground = "black"
+background = "#666666"
+tabselect = "#285577"
+
 [other]
 font = "Terminus"
 font-size = 10
