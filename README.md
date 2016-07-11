@@ -4,6 +4,7 @@ In python3, configs and color themes in toml.
 
 ##custom template
 Custom template can be added by:
+
 1. Add custom template in template folder
 2. Add add template_name in TEMPLATES list in autoconfig.py
 3. Add target path (template_name = "/path/to/actual/config") to config.toml (paths section)
