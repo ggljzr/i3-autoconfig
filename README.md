@@ -2,6 +2,10 @@
 
 In python3, configs and color themes in toml.
 
+##Requirements
+* Python3
+* pytoml
+
 ##custom template
 Custom template can be added by:
 
