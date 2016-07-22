@@ -43,7 +43,7 @@ rofi.hlbg-urgent: ##color1##
 *color8:  ##darkGrey##
 ! DarkRed + Red
 *color1: ##darkRed##
-*color9: ##red## 
+*color9: ##red##
 ! DarkGreen + Green
 *color2:  ##darkGreen##
 *color10: ##green##
