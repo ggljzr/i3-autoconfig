@@ -48,8 +48,10 @@ foreground = "black"
 background = "#666666"
 tabselect = "#285577"
 
+[wallpaper]
+    pic = "/home/ggljzr/Pictures/win95.png"
+
 [other]
 font = "Terminus"
 font-size = 10
-wallpaper = "/home/ggljzr/Pictures/win95.png"
 shadows = "none" #mild, thick or none

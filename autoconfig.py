@@ -127,7 +127,15 @@ for template in TEMPLATES:
     sedw('font_size', theme['other']['font-size'], template_name)
 
 #wallpaper
-sedw('wallpaper', theme['other']['wallpaper'], 'i3config.temp')
+sedw('wallpaperPic', theme['wallpaper']['pic'], 'i3config.temp')
+bg_mode = 'scale'
+
+try:
+    bg_mode = theme['wallpaper']['mode']
+except KeyError:
+    pass
+
+sedw('wallpaperMode', bg_mode, 'i3config.temp')
 
 print("")
 
@@ -170,5 +178,5 @@ subprocess.call(['xrdb', '-load', config['paths']['xresources']])
 subprocess.call(['i3-msg', 'restart'])
 subprocess.call(['pkill', 'compton'])
 subprocess.call(['compton', '-b'])
-subprocess.call(['feh', '--bg-scale', theme['other']['wallpaper']])
+subprocess.call(['feh', '--bg-{}'.format(bg_mode), theme['wallpaper']['pic']])
 
