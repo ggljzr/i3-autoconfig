@@ -16,5 +16,5 @@ Custom template can be added by:
 Note thath template_name in TEMPLATES and in config.toml must be same. This should be enough to use colors and font setting from theme. In your template use ##colorName## tags to specify color (e.g. ##darkBlue## or ##foreground##) and ##font_family##, ##font_size## for fonts.
 
 ##todo
-firefox config probably needs foreground and background options for urlbar and toolbar
-(maybe use list of colors, check length), error handling, maybe also write list of used tags and unify notation.
+* firefox config probably needs foreground and background options for urlbar and toolbar (maybe use list of colors, check length), error handling, maybe also write list of used tags and unify notation.
+* foreground color settings for vim
