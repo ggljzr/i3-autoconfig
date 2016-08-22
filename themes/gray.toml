@@ -4,26 +4,26 @@ name = "gray"
 black = "#3c3c3b"
 darkGrey = "#545454"
 
-darkRed = "#955252"
-red = "#BD6B6B"
+darkRed = "#834d4b"
+red = "#9f5e5b"
 
-darkGreen = "#7A8A5D"
-green = "#A1B67B"
+darkGreen = "#4b8365"
+green = "#579876"
 
-darkYellow = "#C49D4E"
-yellow = "#FFCC66"
+darkYellow = "#83694b"
+yellow = "#9f7f5B"
 
-darkBlue = "#61878B"
-blue = "#60B1B7"
+darkBlue = "#4b6983"
+blue = "#6084a4"
 
-darkMagenta = "#7C5971"
-magenta = "#A77899"
+darkMagenta = "#834B7E"
+magenta = "#A25D9C"
 
-darkCyan = "#679787"
-cyan = "#7CB6A3"
+darkCyan = "#4B8380"
+cyan = "#5b9f9c"
 
 lightGrey = "#dddddd"
-white = "#fff4e8"
+white = "#f0f0f0"
 
 background = "#dddddd"
 foreground = "#3c3c3b"
@@ -48,17 +48,12 @@ gaps-outer = 0
     urgent = "darkRed"
     foreground = "white"
 
-#firefox options can also be ommited
-#[firefox]
-#foreground = "#005500"
-#background = "white"
-#urlbar = "darkRed"
-#toolbar = "#ff0000"
-#tabselect = "#00ff88"
+[firefox]
+    foreground = "white"
 
 [wallpaper]
-    pic = "/home/ggljzr/Pictures/tiles/sayagata-400px.png"
-    mode = "tile" #feh bg mode (scale, tile, center). defaults to scale
+    pic = "/home/ggljzr/Pictures/win95.png"
+    mode = "scale" #feh bg mode (scale, tile, center). defaults to scale
 
 [other]
 font = "Terminus"
