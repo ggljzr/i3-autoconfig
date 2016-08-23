@@ -30,7 +30,7 @@ markup=none
 
 [music]
 color=##darkRed##
-command=exec mpc current
+command=exec ~/.i3/current_song.py
 interval=5
 
 [weather]
