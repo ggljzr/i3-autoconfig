@@ -1,5 +1,5 @@
 [paths]
-i3config = "/home/ggljzr/.i3/config"
+i3config = "/home/ggljzr/.i3/config" #you should not use other name than 'config' for this one for now
 xresources = "/home/ggljzr/.Xresources"
 i3blocks = "/home/ggljzr/.i3blocks.conf"
 compton = "/home/ggljzr/.config/compton.conf"

@@ -182,7 +182,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10 # decrease
 
 #startup
 exec --no-startup-id nm-applet
-exec --no-startup-id feh --bg-##wallpaperMode##  ##wallpaperPic##
+exec --no-startup-id feh --bg-##wallpaperMode##  ~/.i3/current
 
 #focus_follows_mouse no
 

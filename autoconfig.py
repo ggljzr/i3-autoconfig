@@ -127,7 +127,12 @@ for template in TEMPLATES:
     sedw('font_size', theme['other']['font-size'], template_name)
 
 #wallpaper
-sedw('wallpaperPic', theme['wallpaper']['pic'], 'i3config.temp')
+#makes copy of selected wallpaper in folder with i3 config file
+#(set in config.toml)
+#so if you want to change wallpaper you can simply change this 
+#file instead of rewriting .theme file and reruning script
+bg_path = config['paths']['i3config'].split('config')[0] #this will not work if target is not 'config'
+subprocess.call('cp {} {}current'.format(theme['wallpaper']['pic'], bg_path),shell=True)
 bg_mode = 'scale'
 
 try:

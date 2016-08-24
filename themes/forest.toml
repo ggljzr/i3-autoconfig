@@ -58,7 +58,7 @@ gaps-outer = 0
 
 [wallpaper]
     pic = "/home/ggljzr/Pictures/bird.jpg"
-    #mode = 'scale' #options for feh --bg-
+    mode = 'tile' #options for feh --bg-, defaults to scale if ommitted
 
 [other]
 font = "Terminus"
