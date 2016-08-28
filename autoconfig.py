@@ -38,6 +38,9 @@ TEMPLATES = ['i3config', 'xresources', 'i3blocks', 'userchrome']
 #shadow presets for compton
 SHADOWS = ['mild', 'thick', 'none']
 
+#bg modes
+BG_MODES = ['center', 'fill', 'max', 'scale', 'tile']
+
 color_pattern = re.compile(r'^#[a-fA-F0-9]{6}$')
 
 with open('config.toml', 'rb') as config_file:
@@ -126,24 +129,6 @@ for template in TEMPLATES:
     sedw('font_family', theme['other']['font'], template_name)
     sedw('font_size', theme['other']['font-size'], template_name)
 
-#wallpaper
-#makes copy of selected wallpaper in folder with i3 config file
-#(set in config.toml)
-#so if you want to change wallpaper you can simply change this 
-#file instead of rewriting .theme file and reruning script
-bg_path = config['paths']['i3config'].split('config')[0] #this will not work if target is not 'config'
-subprocess.call('cp {} {}current'.format(theme['wallpaper']['pic'], bg_path),shell=True)
-bg_mode = 'scale'
-
-try:
-    bg_mode = theme['wallpaper']['mode']
-except KeyError:
-    pass
-
-sedw('wallpaperMode', bg_mode, 'i3config.temp')
-
-print("")
-
 #firefox userchrome config
 #if any option missing, default setting is applied
 #DRY 1. strike (see i3 windows config)
@@ -183,5 +168,19 @@ subprocess.call(['xrdb', '-load', config['paths']['xresources']])
 subprocess.call(['i3-msg', 'restart'])
 subprocess.call(['pkill', 'compton'])
 subprocess.call(['compton', '-b'])
+
+#wallpaper setting
+#this sets ./fehbg script file
+bg_mode = 'scale'
+try:
+    bg_mode = theme['wallpaper']['mode']
+except KeyError:
+    pass
+
+if bg_mode not in BG_MODES:
+    print('{} not in available bg modes (see man feh), defaults to scale'.format(bg_mode))
+    bg_mode = 'scale'
+
 subprocess.call(['feh', '--bg-{}'.format(bg_mode), theme['wallpaper']['pic']])
+
 
