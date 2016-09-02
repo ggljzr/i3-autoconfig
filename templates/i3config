@@ -52,7 +52,7 @@ exec --no-startup-id compton -b
 # installed.
 
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -p ">>" -nb "##background##" -nf "##foreground##" -sb "##foreground##" -sf "##background##" -fn "##font_family##"'
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -p ">>" -nb "##background##" -nf "##foreground##" -sb "##i3_focused##" -sf "##i3_foreground##" -fn "##font_family##"'
 
 # change focus
 bindsym $mod+j focus left
