@@ -123,7 +123,7 @@ else:
     sedw('gaps_outer', gaps_outer, 'i3config.temp')
     sedw('border', border, 'i3config.temp')
 
-#fonts
+    #fonts
 for template in TEMPLATES:
     template_name = '{}.temp'.format(template)
     sedw('font_family', theme['other']['font'], template_name)

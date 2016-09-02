@@ -1,0 +1,43 @@
+name = "3024"
+
+[colors]
+black = "#090300"
+darkGrey = "#5c5855"
+
+darkRed = "#db2d20"
+red = "#db2d20"
+
+darkGreen = "#01a252"
+green = "#01a252"
+
+darkYellow = "#fded02"
+yellow = "#fded02"
+
+darkBlue = "#01a0e4"
+blue = "#01a0e4"
+
+darkMagenta = "#a16a94"
+magenta = "#a16a94"
+
+darkCyan = "#b5e4f4"
+cyan = "#b5e4f4"
+
+lightGrey = "#a5a2a2"
+white = "#f7f7f7"
+
+background = "#090300"
+foreground = "#f7f7f7"
+
+[i3]
+
+border = 0
+gaps-inner = 0
+gaps-outer = 0
+    
+[wallpaper]
+    pic = "/home/ggljzr/Pictures/black.png"
+
+[other]
+font = "Terminus"
+font-size = 10
+shadows = "none" #mild, thick or none
