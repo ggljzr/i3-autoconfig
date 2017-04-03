@@ -15,7 +15,7 @@ In python3, configs and color themes in toml.
 * Use [i3gaps](https://github.com/Airblader/i3) fork. (Optional)
 * Custom scripts and dotfiles are [here](https://github.com/ggljzr/i3config) (wildly unorganized).
 
-##custom template
+## Custom template
 Custom template can be added by:
 
 1. Add custom template to template folder
@@ -24,7 +24,7 @@ Custom template can be added by:
 
 Note thath template_name in TEMPLATES and in config.toml must be same. This should be enough to use colors and font setting from theme. In your template use ##colorName## tags to specify color (e.g. ##darkBlue## or ##foreground##) and ##font_family##, ##font_size## for fonts.
 
-##todo
+## TODO
 * firefox config probably needs foreground and background options for urlbar and toolbar (maybe use list of colors, check length), error handling, maybe also write list of used tags and unify notation.
 * foreground color settings for vim
 
