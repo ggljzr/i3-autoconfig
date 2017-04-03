@@ -1,8 +1,8 @@
-#Autoconfig script for i3 and other programs
+# Autoconfig script for i3 and other programs
 
 In python3, configs and color themes in toml.
 
-##Requirements
+## Requirements
 * Python3
 * pytoml
 
