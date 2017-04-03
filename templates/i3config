@@ -99,7 +99,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 #kb toggle
-bindsym $mod+c exec --no-startup-id sh ~/.i3/kbscript.sh
+bindsym $mod+c exec --no-startup-id bash ~/.i3/kbscript.sh
 
 #window switcher
 bindsym $mod+Tab exec --no-startup-id rofi -show window
@@ -171,14 +171,14 @@ bindsym $mod+End exec --no-startup-id systemctl suspend
 #bindsym $mod+End exec python ~/.i3/logout.py
 
 # Pulse Audio 
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 5%+ unmute
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q set Master 5%- unmute
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse -q set Master 5%+ unmute
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse -q set Master 5%- unmute
  
-bindsym XF86AudioMute exec amixer -q sset Master toggle # mute sound
+bindsym XF86AudioMute exec amixer -D pulse -q sset Master toggle # mute sound
 
 # # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10 # increase screen brightness
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id xbright +25 # increase screen brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id xbright -25 # decrease screen brightness
 
 #startup
 exec --no-startup-id nm-applet
@@ -197,7 +197,7 @@ bar {
 
 	separator_symbol "|"
 
-	height 25
+	#height 25
 
 	colors{
 		separator ##i3_focused##

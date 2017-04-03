@@ -64,7 +64,7 @@ color=##yellow##
 interval=1
 label=Shine
 #label=  
-command= printf %.0f `xbacklight -get`
+command= printf %.0f `xbright`
 
 [volume]
 color=##red##
