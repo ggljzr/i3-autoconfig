@@ -83,7 +83,7 @@ interval=1
 [numlock]
 label=
 color=##color14##
-command= ~/.i3/num.sh
+command=bash ~/.i3/num.sh
 interval=1
 markup=pango
 
