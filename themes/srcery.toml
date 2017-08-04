@@ -1,32 +1,33 @@
-name = "Example theme (forest)"
+#https://github.com/roosta/vim-srcery
+name = "Srcery"
 
 [colors]
-black = "#212121"
-darkGrey = "#545454"
+black = "#1C1819"
+darkGrey = "#2D2C29"
 
-darkRed = "#955252"
-red = "#BD6B6B"
+darkRed = "#FF3128"
+red = "#F75341"
 
-darkGreen = "#7A8A5D"
-green = "#A1B67B"
+darkGreen = "#519F50"
+green = "#98BC37"
 
-darkYellow = "#C49D4E"
-yellow = "#FFCC66"
+darkYellow = "#FBB829"
+yellow = "#FED06E"
 
-darkBlue = "#61878B"
-blue = "#60B1B7"
+darkBlue = "#5573A3"
+blue = "#8EB2F7"
 
-darkMagenta = "#7C5971"
-magenta = "#A77899"
+darkMagenta = "#E02C6D"
+magenta = "#E35682"
 
-darkCyan = "#679787"
-cyan = "#7CB6A3"
+darkCyan = "#0AAEB3"
+cyan = "#53FDE9"
 
-lightGrey = "#f0f0f0"
-white = "#fff4e8"
+lightGrey = "#918175"
+white = "#FCE8C3"
 
-background = "#212121"
-foreground = "#fff4e8"
+background = "#1C1819"
+foreground = "#FCE8C3"
 
 
 #this can be ommitted
@@ -63,4 +64,4 @@ gaps-outer = 0
 [other]
 font = "Terminus"
 font-size = 10
-shadows = "mild" #mild, thick or none
+shadows = "none" #mild, thick or none

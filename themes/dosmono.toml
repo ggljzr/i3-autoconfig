@@ -1,0 +1,47 @@
+name = "Dosbox monokai"
+
+[colors]
+black = "#000000"
+darkGrey = "#555555"
+
+darkRed = "#B30544"
+red = "#F92672"
+
+darkGreen = "#709D16"
+green = "#A6E22E"
+
+darkYellow = "#CFBF25"
+yellow = "#E6D874"
+
+darkBlue = "#139EB9"
+blue = "#66D9EF"
+
+darkMagenta = "#792EFF"
+magenta = "#AE81FF"
+
+darkCyan = "#16D0A8"
+cyan = "#66EFD2"
+
+lightGrey = "#999999"
+white = "#ffffff"
+
+background = "#222222"
+foreground = "#ffffff"
+
+[i3]
+
+border = 0
+gaps-inner = 0
+gaps-outer = 0
+    
+    [i3.windows]
+    focused = "#285577"
+    inactive = "darkGrey"
+    unfocused = "darkGrey"
+    urgent = "darkRed"
+    foreground = "white"
+
+[other]
+font = "Terminus"
+font-size = 10
+shadows = "none" #mild, thick or none

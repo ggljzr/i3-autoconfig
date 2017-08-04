@@ -3,4 +3,4 @@ i3config = "/home/ggljzr/.i3/config" #you should not use other name than 'config
 xresources = "/home/ggljzr/.Xresources"
 i3blocks = "/home/ggljzr/.i3blocks.conf"
 compton = "/home/ggljzr/.config/compton.conf"
-userchrome = "/home/ggljzr/.mozilla/firefox/so3i8lhu.default/chrome/userChrome.css"
+userchrome = "/home/ggljzr/.mozilla/firefox/5z0dvcum.default/chrome/userChrome.css"

@@ -181,6 +181,8 @@ if bg_mode not in BG_MODES:
     print('{} not in available bg modes (see man feh), defaults to scale'.format(bg_mode))
     bg_mode = 'scale'
 
-subprocess.call(['feh', '--bg-{}'.format(bg_mode), theme['wallpaper']['pic']])
-
+try:
+    subprocess.call(['feh', '--bg-{}'.format(bg_mode), theme['wallpaper']['pic']])
+except KeyError:
+    pass
 
