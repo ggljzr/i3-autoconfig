@@ -44,6 +44,8 @@ gaps outer ##gaps_outer##
 #run composition manager
 exec --no-startup-id compton -b
 
+#run redshift
+exec --no-startup-id redshift-gtk
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run
