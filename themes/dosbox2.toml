@@ -13,7 +13,7 @@ green = "#00FF00"
 darkYellow = "#CDCD00"
 yellow = "#FFFF00"
 
-darkBlue = "#4682B4"
+darkBlue = "#0000dd"
 blue = "#1E90FF"
 
 darkMagenta = "#CD00CD"
@@ -30,16 +30,14 @@ foreground = "#ffffff"
 
 [i3]
 
-border = 1
-gaps-inner = 16
-gaps-outer = 0
+border = 3
     
     [i3.windows]
-    focused = "white"
-    inactive = "lightGrey"
-    unfocused = "lightGrey"
+    focused = "darkBlue"
+    inactive = "darkGrey"
+    unfocused = "darkGrey"
     urgent = "red"
-    foreground = "black"
+    foreground = "white"
 
 [firefox]
 toolbar = "black"
@@ -47,9 +45,6 @@ urlbar = "#285577"
 foreground = "white"
 background = "darkGrey"
 tabselect = "#285577"
-
-[wallpaper]
-    pic = "/home/ggljzr/Pictures/black.png"
 
 [other]
 font = "Terminus"
