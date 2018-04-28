@@ -39,13 +39,6 @@ border = 3
     urgent = "red"
     foreground = "white"
 
-[firefox]
-toolbar = "black"
-urlbar = "#285577"
-foreground = "white"
-background = "darkGrey"
-tabselect = "#285577"
-
 [other]
 font = "Terminus"
 font-size = 10

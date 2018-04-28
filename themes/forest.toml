@@ -47,15 +47,7 @@ gaps-outer = 0
     unfocused = "darkGrey"
     urgent = "darkRed"
     foreground = "white"
-
-#firefox options can also be ommited
-#[firefox]
-#foreground = "#005500"
-#background = "white"
-#urlbar = "darkRed"
-#toolbar = "#ff0000"
-#tabselect = "#00ff88"
-
+    
 [wallpaper]
     pic = "/home/ggljzr/Pictures/bird.jpg"
     mode = 'tile' #options for feh --bg-, defaults to scale if ommitted
