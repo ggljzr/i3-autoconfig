@@ -132,19 +132,22 @@ for template in TEMPLATES:
 #firefox userchrome config
 #if any option missing, default setting is applied
 #DRY 1. strike (see i3 windows config)
-for option in FF_OPTIONS:
-    try:
-        color = theme['firefox'][option[0]]
-    except KeyError:
-        color = option[1]
+if theme.get('firefox') != None:
+    for option in FF_OPTIONS:
+        try:
+            color = theme['firefox'][option[0]]
+        except KeyError:
+            color = option[1]
 
-    if color_pattern.match(color):
-        color_val = color
-    else:
-        color_val = theme['colors'][color]
+        if color_pattern.match(color):
+            color_val = color
+        else:
+            color_val = theme['colors'][color]
 
-    print("ff option {} {} {}".format(option[0], color, color_val))
-    sedw('ff_' + option[0], color_val, 'userchrome.temp')
+        print("ff option {} {} {}".format(option[0], color, color_val))
+        sedw('ff_' + option[0], color_val, 'userchrome.temp')
+else:
+    print('Skipping firefox')
 
 #coping temp files to their targets
 for template in TEMPLATES:
