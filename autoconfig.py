@@ -25,15 +25,7 @@ I3_WINDOWS = [
         ('urgent', 'darkRed'), 
         ('foreground', 'foreground')]
 
-FF_OPTIONS = [
-        ('foreground', 'foreground'),
-        ('background', 'background'), 
-        ('urlbar', 'darkBlue'), 
-        ('toolbar', 'darkGrey'), 
-        ('tabselect', 'blue')
-        ]
-
-TEMPLATES = ['i3config', 'xresources', 'i3blocks', 'userchrome']
+TEMPLATES = ['i3config', 'xresources', 'i3blocks']
 
 #shadow presets for compton
 SHADOWS = ['mild', 'thick', 'none']
@@ -128,26 +120,6 @@ for template in TEMPLATES:
     template_name = '{}.temp'.format(template)
     sedw('font_family', theme['other']['font'], template_name)
     sedw('font_size', theme['other']['font-size'], template_name)
-
-#firefox userchrome config
-#if any option missing, default setting is applied
-#DRY 1. strike (see i3 windows config)
-if theme.get('firefox') != None:
-    for option in FF_OPTIONS:
-        try:
-            color = theme['firefox'][option[0]]
-        except KeyError:
-            color = option[1]
-
-        if color_pattern.match(color):
-            color_val = color
-        else:
-            color_val = theme['colors'][color]
-
-        print("ff option {} {} {}".format(option[0], color, color_val))
-        sedw('ff_' + option[0], color_val, 'userchrome.temp')
-else:
-    print('Skipping firefox')
 
 #coping temp files to their targets
 for template in TEMPLATES:
