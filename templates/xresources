@@ -5,32 +5,7 @@ URxvt.perl-ext-common: default,matcher
 URxvt.url-launcher: /usr/bin/firefox
 URxvt.matcher.button: 1
 
-URxvt*iconFile:            /usr/share/icons/Numix-Circle/scalable/apps/terminal.svg
-!URxvt*iconFile: /usr/share/icons/Adwaita/16x16/apps/utilities-terminal.png
-!URxvt*iconFile: /home/ggljzr/Documents/myConfig/icons/flattr-icons/apps/64/bash.svg
-
 URxvt*font: xft:##font_family##:size=##font_size##
-
-xterm*scrollBar: false
-
-! rofi config
-rofi.font: ##font_family## ##font_size##
-
-rofi.hlfg: ##fore##
-rofi.hlbg: ##color2##
-
-rofi.fg-active: ##color12##
-rofi.bg-active: ##bckg##
-
-rofi.hlfg-active: ##fore##
-rofi.hlbg-active: ##color4##
-
-rofi.fg-urgent: ##color9##
-rofi.bg-urgent: ##bckg##
-
-rofi.hlfg-urgent: ##fore##
-rofi.hlbg-urgent: ##color1##
-
 
 
 ! terminal colors ------------------------------------------------------------
