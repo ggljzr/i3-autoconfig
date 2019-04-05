@@ -4,7 +4,7 @@ In python3, configs and color themes in toml.
 
 ## Requirements
 * Python3
-* pytoml
+* toml
 
 ## Notes
 
@@ -19,12 +19,16 @@ In python3, configs and color themes in toml.
 Custom template can be added by:
 
 1. Add custom template to template folder
-2. Add add template_name to TEMPLATES list in autoconfig.py
-3. Add target path (template_name = "/path/to/actual/config") to config.toml (paths section)
+2. Add add ``template_name`` to ``TEMPLATES`` list in ``autoconfig.py``
+3. Add target path (``template_name = "/path/to/actual/config"``) to ``config.toml`` (paths section)
 
-Note thath template_name in TEMPLATES and in config.toml must be same. This should be enough to use colors and font setting from theme. In your template use ##colorName## tags to specify color (e.g. ##darkBlue## or ##foreground##) and ##font_family##, ##font_size## for fonts.
+Note that ``template_name`` in ``TEMPLATES`` and in ``config.toml`` must be same. In your template use ``##colorName##`` tags to specify color (e.g. ``##darkBlue##`` or ``##foreground##``).
 
-## TODO
-* firefox config probably needs foreground and background options for urlbar and toolbar (maybe use list of colors, check length), error handling, maybe also write list of used tags and unify notation.
-* foreground color settings for vim
+## VS Code theme
 
+1. Copy ``autoconfig-theme`` to ``~/.vscode/extensions``
+2. Set ``vscode`` path in ``config.toml`` to ``~/.vscode/extensions/autoconfig-theme/theme/autoconfig-theme-color-theme.json``
+
+## Fish config file
+
+Copy to ``~/.config/fish``. This file uses colors from ``.Xresources``, so it does not need a template.
