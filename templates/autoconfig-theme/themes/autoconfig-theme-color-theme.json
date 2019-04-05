@@ -1,0 +1,224 @@
+{
+  "name": "8bit",
+  "colors": {
+    "editor.background": "#000000",
+    "editor.foreground": "#ffffff",
+    "editor.selectionBackground": "#000099",
+    "editor.selectionForeground": "#ffffff",
+    "editor.lineHighlightBackground": "#000099",
+    "editorCursor.foreground": "#ffffff",
+    "editorWhitespace.foreground": "#999999",
+    "tab.activeBackground": "#000099",
+    "tab.inactiveBackground": "#000000",
+    "panel.background": "#000000",
+    "activityBar.background": "#000000",
+    "sideBar.background": "#000000",
+    "terminal.ansiBlack": "#000000",
+    "terminal.ansiBrightBlack": "#555555",
+    "terminal.ansiBlue": "#0000dd",
+    "terminal.ansiBrightBlue": "#1e90ff",
+    "terminal.ansiGreen": "#00cd00",
+    "terminal.ansiBrightGreen": "#00ff00",
+    "terminal.ansiRed": "#cd0000",
+    "terminal.ansiBrightRed": "#ff0000",
+    "terminal.ansiYellow": "#cdcd00",
+    "terminal.ansiBrightYellow": "#ffff00",
+    "terminal.ansiMagenta": "#cd00cd",
+    "terminal.ansiBrightMagenta": "#ff00ff",
+    "terminal.ansiCyan": "#00cdcd",
+    "terminal.ansiBrightCyan": "#00ffff",
+    "terminal.ansiWhite": "#fcfcfc",
+    "terminal.ansiBrightWhite": "#ffffff",
+    "terminal.background": "#000000",
+    "terminal.foreground": "#ffffff"
+  },
+  "tokenColors": [{
+      "settings": {
+        "foreground": "#ffffffff",
+        "background": "#000000ff"
+      }
+    },
+    {
+      "name": "Comment",
+      "scope": "comment",
+      "settings": {
+        "foreground": "#aaaaaa"
+      }
+    },
+    {
+      "name": "String",
+      "scope": "string",
+      "settings": {
+        "foreground": "#00FF00",
+        "background": "#0000FF"
+      }
+    },
+    {
+      "name": "Number",
+      "scope": "constant.numeric",
+      "settings": {
+        "foreground": "#FF0000"
+      }
+    },
+    {
+      "name": "Built-in constant",
+      "scope": "constant.language",
+      "settings": {
+        "foreground": "#FF0000"
+      }
+    },
+    {
+      "name": "User-defined constant",
+      "scope": "constant.character, constant.other",
+      "settings": {
+        "foreground": "#FF0000"
+      }
+    },
+    {
+      "name": "Variable",
+      "scope": "variable",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "#FFFF00"
+      }
+    },
+    {
+      "name": "Keyword",
+      "scope": "keyword",
+      "settings": {
+        "foreground": "#FF00FF"
+      }
+    },
+    {
+      "name": "Storage",
+      "scope": "storage",
+      "settings": {
+        "foreground": "#FF00FF"
+      }
+    },
+    {
+      "name": "Storage type",
+      "scope": "storage.type",
+      "settings": {
+        "foreground": "#00FFFF"
+      }
+    },
+    {
+      "name": "Class name",
+      "scope": "entity.name.class",
+      "settings": {
+        "foreground": "#FFFF00"
+      }
+    },
+    {
+      "name": "Inherited class",
+      "scope": "entity.other.inherited-class",
+      "settings": {
+        "foreground": "#FFFF00"
+      }
+    },
+    {
+      "name": "Function name",
+      "scope": "entity.name.function",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "#FFFF00"
+      }
+    },
+    {
+      "name": "Function argument",
+      "scope": "variable.parameter",
+      "settings": {
+        "foreground": "#FFFF00"
+      }
+    },
+    {
+      "name": "Tag name",
+      "scope": "entity.name.tag",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "#FF0000"
+      }
+    },
+    {
+      "name": "Tag attribute",
+      "scope": "entity.other.attribute-name",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "#FF0000"
+      }
+    },
+    {
+      "name": "Library function",
+      "scope": "support.function",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "#00FF00"
+      }
+    },
+    {
+      "name": "Library constant",
+      "scope": "support.constant",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "#00FF00"
+      }
+    },
+    {
+      "name": "Library class/type",
+      "scope": "support.type, support.class",
+      "settings": {
+        "foreground": "#00FF00"
+      }
+    },
+    {
+      "name": "Library variable",
+      "scope": "support.other.variable",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "#FF0000"
+      }
+    },
+    {
+      "name": "Invalid",
+      "scope": "invalid",
+      "settings": {
+        "background": "#FF0000",
+        "fontStyle": "",
+        "foreground": "#FFFFFF"
+      }
+    },
+    {
+      "name": "Invalid deprecated",
+      "scope": "invalid.deprecated",
+      "settings": {
+        "background": "#FF0000",
+        "foreground": "#FFFFFF"
+      }
+    },
+    {
+      "scope": "token.info-token",
+      "settings": {
+        "foreground": "#6796e6"
+      }
+    },
+    {
+      "scope": "token.warn-token",
+      "settings": {
+        "foreground": "#cd9731"
+      }
+    },
+    {
+      "scope": "token.error-token",
+      "settings": {
+        "foreground": "#f44747"
+      }
+    },
+    {
+      "scope": "token.debug-token",
+      "settings": {
+        "foreground": "#b267e6"
+      }
+    }
+  ]
+}
