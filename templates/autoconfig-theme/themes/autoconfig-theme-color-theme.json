@@ -1,77 +1,76 @@
 {
   "name": "8bit",
   "colors": {
-    "editor.background": "#000000",
-    "editor.foreground": "#ffffff",
-    "editor.selectionBackground": "#000099",
-    "editor.selectionForeground": "#ffffff",
-    "editor.lineHighlightBackground": "#000099",
-    "editorCursor.foreground": "#ffffff",
-    "editorWhitespace.foreground": "#999999",
-    "tab.activeBackground": "#000099",
-    "tab.inactiveBackground": "#000000",
-    "panel.background": "#000000",
-    "activityBar.background": "#000000",
-    "sideBar.background": "#000000",
-    "terminal.ansiBlack": "#000000",
-    "terminal.ansiBrightBlack": "#555555",
-    "terminal.ansiBlue": "#0000dd",
-    "terminal.ansiBrightBlue": "#1e90ff",
-    "terminal.ansiGreen": "#00cd00",
-    "terminal.ansiBrightGreen": "#00ff00",
-    "terminal.ansiRed": "#cd0000",
-    "terminal.ansiBrightRed": "#ff0000",
-    "terminal.ansiYellow": "#cdcd00",
-    "terminal.ansiBrightYellow": "#ffff00",
-    "terminal.ansiMagenta": "#cd00cd",
-    "terminal.ansiBrightMagenta": "#ff00ff",
-    "terminal.ansiCyan": "#00cdcd",
-    "terminal.ansiBrightCyan": "#00ffff",
-    "terminal.ansiWhite": "#fcfcfc",
-    "terminal.ansiBrightWhite": "#ffffff",
-    "terminal.background": "#000000",
-    "terminal.foreground": "#ffffff"
+    "editor.background": ##background##,
+    "editor.foreground": ##foreground##,
+    "editor.selectionBackground": ##darkBlue##,
+    "editor.selectionForeground": ##white##,
+    "editor.lineHighlightBackground": ##darkBlue##,
+    "editorCursor.foreground": ##white##,
+    "editorWhitespace.foreground": ##lightGrey##,
+    "tab.activeBackground": ##darkBlue##,
+	"tab.inactiveBackground": ##black##,
+	"tab.inactiveForeground": ##white##,
+    "panel.background": ##black##,
+    "activityBar.background": ##black##,
+    "sideBar.background": ##black##,
+    "terminal.ansiBlack": ##black##,
+    "terminal.ansiBrightBlack": ##darkGrey##,
+    "terminal.ansiBlue": ##darkBlue##,
+    "terminal.ansiBrightBlue": ##blue##,
+    "terminal.ansiGreen": ##darkGreen##,
+    "terminal.ansiBrightGreen": ##green##,
+    "terminal.ansiRed": ##darkRed##,
+    "terminal.ansiBrightRed": ##red##,
+    "terminal.ansiYellow": ##darkYellow##,
+    "terminal.ansiBrightYellow": ##yellow##,
+    "terminal.ansiMagenta": ##darkMagenta,
+    "terminal.ansiBrightMagenta": ##magenta##,
+    "terminal.ansiCyan": ##darkCyan##,
+    "terminal.ansiBrightCyan": ##cyan##,
+    "terminal.ansiWhite": ##darkGrey##,
+    "terminal.ansiBrightWhite": ##white##,
+    "terminal.background": ##background##,
+    "terminal.foreground": ##foreground##
   },
   "tokenColors": [{
       "settings": {
         "foreground": "#ffffffff",
-        "background": "#000000ff"
       }
     },
     {
       "name": "Comment",
       "scope": "comment",
       "settings": {
-        "foreground": "#aaaaaa"
+        "foreground": ##darkGrey##
       }
     },
     {
       "name": "String",
       "scope": "string",
       "settings": {
-        "foreground": "#00FF00",
-        "background": "#0000FF"
+        "foreground": ##green##,
       }
     },
     {
       "name": "Number",
       "scope": "constant.numeric",
       "settings": {
-        "foreground": "#FF0000"
+        "foreground": ##red##
       }
     },
     {
       "name": "Built-in constant",
       "scope": "constant.language",
       "settings": {
-        "foreground": "#FF0000"
+        "foreground": ##red##
       }
     },
     {
       "name": "User-defined constant",
       "scope": "constant.character, constant.other",
       "settings": {
-        "foreground": "#FF0000"
+        "foreground": ##red##
       }
     },
     {
@@ -79,42 +78,42 @@
       "scope": "variable",
       "settings": {
         "fontStyle": "",
-        "foreground": "#FFFF00"
+        "foreground": ##white##
       }
     },
     {
       "name": "Keyword",
       "scope": "keyword",
       "settings": {
-        "foreground": "#FF00FF"
+        "foreground": ##blue##
       }
     },
     {
       "name": "Storage",
       "scope": "storage",
       "settings": {
-        "foreground": "#FF00FF"
+        "foreground": ##magenta##
       }
     },
     {
       "name": "Storage type",
       "scope": "storage.type",
       "settings": {
-        "foreground": "#00FFFF"
+        "foreground": ##cyan##
       }
     },
     {
       "name": "Class name",
       "scope": "entity.name.class",
       "settings": {
-        "foreground": "#FFFF00"
+        "foreground": ##green##
       }
     },
     {
       "name": "Inherited class",
       "scope": "entity.other.inherited-class",
       "settings": {
-        "foreground": "#FFFF00"
+        "foreground": ##green##
       }
     },
     {
@@ -122,14 +121,14 @@
       "scope": "entity.name.function",
       "settings": {
         "fontStyle": "",
-        "foreground": "#FFFF00"
+        "foreground": ##magenta##
       }
     },
     {
       "name": "Function argument",
       "scope": "variable.parameter",
       "settings": {
-        "foreground": "#FFFF00"
+        "foreground": ##yellow##
       }
     },
     {
@@ -137,7 +136,7 @@
       "scope": "entity.name.tag",
       "settings": {
         "fontStyle": "",
-        "foreground": "#FF0000"
+        "foreground": ##red##
       }
     },
     {
@@ -145,7 +144,7 @@
       "scope": "entity.other.attribute-name",
       "settings": {
         "fontStyle": "",
-        "foreground": "#FF0000"
+        "foreground": ##red##
       }
     },
     {
@@ -153,7 +152,7 @@
       "scope": "support.function",
       "settings": {
         "fontStyle": "",
-        "foreground": "#00FF00"
+        "foreground": ##yellow##
       }
     },
     {
@@ -161,14 +160,14 @@
       "scope": "support.constant",
       "settings": {
         "fontStyle": "",
-        "foreground": "#00FF00"
+        "foreground": ##yellow##
       }
     },
     {
       "name": "Library class/type",
       "scope": "support.type, support.class",
       "settings": {
-        "foreground": "#00FF00"
+        "foreground": ##yellow##
       }
     },
     {
@@ -176,48 +175,46 @@
       "scope": "support.other.variable",
       "settings": {
         "fontStyle": "",
-        "foreground": "#FF0000"
+        "foreground": ##red##
       }
     },
     {
       "name": "Invalid",
       "scope": "invalid",
       "settings": {
-        "background": "#FF0000",
         "fontStyle": "",
-        "foreground": "#FFFFFF"
+        "foreground": ##white##
       }
     },
     {
       "name": "Invalid deprecated",
       "scope": "invalid.deprecated",
       "settings": {
-        "background": "#FF0000",
-        "foreground": "#FFFFFF"
+        "foreground": ##white##
       }
     },
     {
       "scope": "token.info-token",
       "settings": {
-        "foreground": "#6796e6"
+        "foreground": ##blue##
       }
     },
     {
       "scope": "token.warn-token",
       "settings": {
-        "foreground": "#cd9731"
+        "foreground": ##yellow##
       }
     },
     {
       "scope": "token.error-token",
       "settings": {
-        "foreground": "#f44747"
+        "foreground": ##red##
       }
     },
     {
       "scope": "token.debug-token",
       "settings": {
-        "foreground": "#b267e6"
+        "foreground": ##magenta##
       }
     }
   ]
