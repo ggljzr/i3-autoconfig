@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-import pytoml as toml
+import toml
 import sys
 import subprocess
 import re
@@ -25,7 +25,7 @@ I3_WINDOWS = [
         ('urgent', 'darkRed'), 
         ('foreground', 'foreground')]
 
-TEMPLATES = ['i3config', 'xresources', 'i3blocks']
+TEMPLATES = ['i3config', 'xresources', 'i3blocks', 'vscode']
 
 #shadow presets for compton
 SHADOWS = ['mild', 'thick', 'none']
@@ -35,7 +35,7 @@ BG_MODES = ['center', 'fill', 'max', 'scale', 'tile']
 
 color_pattern = re.compile(r'^#[a-fA-F0-9]{6}$')
 
-with open('config.toml', 'rb') as config_file:
+with open('config.toml', 'r') as config_file:
     config = toml.load(config_file)
 
 argv = sys.argv
@@ -47,7 +47,7 @@ if argc < 2:
 
 theme_path = argv[1]
 
-with open(theme_path, 'rb') as theme_file:
+with open(theme_path, 'r') as theme_file:
     theme = toml.load(theme_file)
 
 
