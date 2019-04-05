@@ -29,13 +29,8 @@ background = "#000000"
 foreground = "#ffffff"
 
 [i3]
-
-border = 0
-gaps-inner = 0
-gaps-outer = 0
-    
     [i3.windows]
-    focused = "#285577"
+    focused = "#215d9c"
     inactive = "darkGrey"
     unfocused = "darkGrey"
     urgent = "darkRed"
@@ -45,6 +40,4 @@ gaps-outer = 0
     pic = "/home/ggljzr/Pictures/win95.png"
 
 [other]
-font = "Terminus"
-font-size = 10
 shadows = "none" #mild, thick or none

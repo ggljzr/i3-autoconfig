@@ -53,6 +53,4 @@ gaps-outer = 0
     mode = 'tile' #options for feh --bg-, defaults to scale if ommitted
 
 [other]
-font = "Terminus"
-font-size = 10
 shadows = "mild" #mild, thick or none
