@@ -37,7 +37,7 @@ foreground = "#ffffff"
     foreground = "white"
     
 [wallpaper]
-    pic = "/home/ggljzr/Pictures/win95.png"
+    pic = "/home/ggljzr/Pictures/Pictures/000.png"
 
 [other]
 shadows = "none" #mild, thick or none
