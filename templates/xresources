@@ -5,8 +5,7 @@ URxvt.perl-ext-common: default,matcher
 URxvt.url-launcher: /usr/bin/firefox
 URxvt.matcher.button: 1
 
-URxvt*font: xft:##font_family##:size=##font_size##
-
+URxvt*font:xft:dejavusansmono:hinting=true:pixelsize=16:antialias=false
 
 ! terminal colors ------------------------------------------------------------
 
