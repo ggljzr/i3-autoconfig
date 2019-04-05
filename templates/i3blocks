@@ -35,7 +35,7 @@ interval=5
 
 [weather]
 color=##blue##
-command=exec python ~/.i3/weatherBar.py -s
+command=exec ~/.i3/rust-weather ~/.i3/weather.json
 interval=1800
 markup=pango
 
