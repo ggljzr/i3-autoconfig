@@ -28,7 +28,7 @@
     "terminal.ansiBrightMagenta": "##magenta##",
     "terminal.ansiCyan": "##darkCyan##",
     "terminal.ansiBrightCyan": "##cyan##",
-    "terminal.ansiWhite": "##darkGrey##",
+    "terminal.ansiWhite": "##lightGrey##",
     "terminal.ansiBrightWhite": "##white##",
     "terminal.background": "##background##",
     "terminal.foreground": "##foreground##"
@@ -42,7 +42,7 @@
       "name": "Comment",
       "scope": "comment",
       "settings": {
-        "foreground": "##darkGrey##"
+        "foreground": "##lightGrey##"
       }
     },
     {
@@ -78,13 +78,14 @@
       "scope": "variable",
       "settings": {
         "fontStyle": "",
-        "foreground": "##white##"
+        "foreground": "##cyan##"
       }
     },
     {
       "name": "Keyword",
       "scope": "keyword",
       "settings": {
+        "fontStyle" : "bold",
         "foreground": "##blue##"
       }
     },
@@ -99,6 +100,7 @@
       "name": "Storage type",
       "scope": "storage.type",
       "settings": {
+        "fontStyle" : "italic",
         "foreground": "##cyan##"
       }
     },
