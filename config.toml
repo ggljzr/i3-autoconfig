@@ -3,3 +3,4 @@ i3config = "/home/ggljzr/.i3/config" #you should not use other name than 'config
 xresources = "/home/ggljzr/.Xresources"
 i3blocks = "/home/ggljzr/.i3blocks.conf"
 compton = "/home/ggljzr/.config/compton.conf"
+vscode = "/home/ggljzr/.vscode/autoconfig-theme/themes/autoconfig-theme-color-theme.json
