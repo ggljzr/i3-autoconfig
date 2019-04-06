@@ -1,0 +1,43 @@
+name = "Contrast forest"
+
+[colors]
+black = "#000000"
+darkGrey = "#545454"
+
+darkRed = "#CA1D1D"
+red = "#ED3B3B"
+
+darkGreen = "#87B532"
+green = "#AEE34E"
+
+darkYellow = "#F1AC21"
+yellow = "#FFCC66"
+
+darkBlue = "#33ACB9"
+blue = "#2FDBe8"
+
+darkMagenta = "#A62F81"
+magenta = "#E53A9A"
+
+darkCyan = "#30CEAA"
+cyan = "#3FF3B8"
+
+lightGrey = "#f0f0f0"
+white = "#ffffff"
+
+background = "#000000"
+foreground = "#ffffff"
+
+[i3]
+    [i3.windows]
+    focused = "#006a75"
+    inactive = "darkGrey"
+    unfocused = "darkGrey"
+    urgent = "darkRed"
+    foreground = "white"
+    
+[wallpaper]
+    pic = "/home/ggljzr/Pictures/Pictures/000.png"
+
+[other]
+shadows = "none" #mild, thick or none
