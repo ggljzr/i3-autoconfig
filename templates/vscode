@@ -7,7 +7,7 @@
     "editor.selectionForeground": "##white##",
     "editor.lineHighlightBackground": "##darkGrey##",
     "editorCursor.foreground": "##white##",
-    "editorWhitespace.foreground": "##lightGrey##",
+    "editorWhitespace.foreground": "##darkGrey##",
     "tab.activeBackground": "##darkBlue##",
 	"tab.inactiveBackground": "##black##",
 	"tab.inactiveForeground": "##white##",
@@ -42,7 +42,8 @@
       "name": "Comment",
       "scope": "comment",
       "settings": {
-        "foreground": "##lightGrey##"
+        "fontStyle" : "italic",
+        "foreground": "##darkGreen##"
       }
     },
     {
