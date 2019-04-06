@@ -1,0 +1,43 @@
+name = "Monokai"
+
+[colors]
+black = "#000000"
+darkGrey = "#555555"
+
+darkRed = "#A90540"
+red = "#f92672"
+
+darkGreen = "#73A216"
+green = "#a6e22e"
+
+darkYellow = "#A25801"
+yellow = "#FD971F"
+
+darkBlue = "#0d6b7d"
+blue = "#66d9ef"
+
+darkMagenta = "#6a2ee2"
+magenta = "#A12EE2"
+
+darkCyan = "#048154"
+cyan = "#26f9ad"
+
+lightGrey = "#999999"
+white = "#ffffff"
+
+background = "#000000"
+foreground = "#ffffff"
+
+[i3]
+    [i3.windows]
+    focused = "darkBlue"
+    inactive = "darkGrey"
+    unfocused = "darkGrey"
+    urgent = "darkRed"
+    foreground = "white"
+    
+[wallpaper]
+    pic = "/home/ggljzr/Pictures/Pictures/000.png"
+
+[other]
+shadows = "none" #mild, thick or none

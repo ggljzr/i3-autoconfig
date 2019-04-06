@@ -1,7 +1,7 @@
 rvm default
 set -gx PATH $PATH /opt/etcher-cli
 
-set fish_color_autosuggestion magenta
+set fish_color_autosuggestion brblue
 set fish_color_command normal
 set fish_color_comment brgray
 set fish_color_cwd brgreen

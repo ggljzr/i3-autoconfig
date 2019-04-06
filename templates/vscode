@@ -3,9 +3,9 @@
   "colors": {
     "editor.background": "##background##",
     "editor.foreground": "##foreground##",
-    "editor.selectionBackground": "##darkBlue##",
+    "editor.selectionBackground": "##darkGrey##",
     "editor.selectionForeground": "##white##",
-    "editor.lineHighlightBackground": "##darkBlue##",
+    "editor.lineHighlightBackground": "##darkGrey##",
     "editorCursor.foreground": "##white##",
     "editorWhitespace.foreground": "##lightGrey##",
     "tab.activeBackground": "##darkBlue##",
