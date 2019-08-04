@@ -1,5 +1,10 @@
 from setuptools import setup, find_packages
 
+import sys
+
+if sys.version_info < (3, 7):
+    sys.exit("Sorry, Python < 3.7 is not supported")
+
 setup(
     name="i3autoconfig",
     version="0.1.0",
