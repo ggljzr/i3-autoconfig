@@ -1,4 +1,4 @@
-import toml
+import pytoml
 import re
 from enum import Enum
 
@@ -110,7 +110,7 @@ class Compton:
 class Theme:
     def __init__(self, theme_path):
         with open(theme_path, "r") as theme_file:
-            data = toml.load(theme_file)
+            data = pytoml.load(theme_file)
 
         self.name = data["name"]
 

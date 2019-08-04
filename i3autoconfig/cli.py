@@ -15,11 +15,6 @@ def load(theme_path):
     print(theme.name)
     print(theme)
 
-    from .templates import I3ConfigTemplate
-
-    i3_config = I3ConfigTemplate()
-    print(i3_config.template_path)
-
 
 def main():
     i3_autoconfig()
