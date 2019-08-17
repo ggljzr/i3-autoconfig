@@ -1,6 +1,10 @@
 import pytoml
 import re
 from enum import Enum
+import shutil
+from pathlib import Path
+
+import subprocess
 
 from .templates import XresTemplate, I3ConfigTemplate, I3BlocksTemplate, VSCodeTemplate
 from .utils import reload
@@ -107,6 +111,10 @@ class Wallpaper:
         except KeyError:
             pass
 
+    def apply(self):
+        print("Applying wallpaper...")
+        subprocess.call(["feh", "--bg-{}".format(self.mode), self.pic])
+
 
 class Compton:
     """
@@ -115,14 +123,23 @@ class Compton:
 
     SHADOWS = ["mild", "thick", "none"]
 
-    def __init__(self, data):
+    def __init__(self, data, target_path=Path(Path.home(), ".config", "compton.conf")):
         self.shadows = "none"
+        self.target_path = target_path
         try:
             shadows = data["other"]["shadows"]
             if shadows in Compton.SHADOWS:
                 self.shadows = shadows
         except KeyError:
             pass
+
+        self.config_template = Path(
+            "i3autoconfig/compton_configs", "compton.conf.{}".format(self.shadows)
+        )
+
+    def apply(self):
+        print("Applying Compton config [{}]".format(self.shadows))
+        shutil.copyfile(self.config_template, self.target_path)
 
 
 class Theme:
@@ -148,4 +165,7 @@ class Theme:
         for t in self.templates:
             t.apply_template(backup=backup)
         # reload settings
+        self.compton.apply()
+        self.wallpaper.apply()
+
         reload()

@@ -15,7 +15,7 @@ def load(theme_path, backup):
     from .theme import Theme
 
     theme = Theme(theme_path)
-    print("Applying theme: {}", theme.name)
+    print("Applying theme: ", theme.name)
     theme.apply_theme(backup=backup)
 
 
