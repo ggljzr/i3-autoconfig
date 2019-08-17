@@ -3,8 +3,11 @@ import re
 from enum import Enum
 import shutil
 from pathlib import Path
+from importlib.resources import read_text
 
 import subprocess
+
+from i3autoconfig import compton_configs
 
 from .templates import XresTemplate, I3ConfigTemplate, I3BlocksTemplate, VSCodeTemplate
 from .utils import reload
@@ -133,13 +136,12 @@ class Compton:
         except KeyError:
             pass
 
-        self.config_template = Path(
-            "i3autoconfig/compton_configs", "compton.conf.{}".format(self.shadows)
-        )
-
     def apply(self):
         print("Applying Compton config [{}]".format(self.shadows))
-        shutil.copyfile(self.config_template, self.target_path)
+
+        config = read_text(compton_configs, "{}.conf".format(self.shadows))
+        with open(self.target_path, "w") as f:
+            f.write(config)
 
 
 class Theme:
