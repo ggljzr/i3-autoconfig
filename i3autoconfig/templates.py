@@ -62,3 +62,16 @@ class I3blocks(Template):
     def render(self):
         colors = self.theme.color_scheme.colors
         return self.template.render(**colors)
+
+
+class VSCode(Template):
+    def __init__(self, theme):
+        super().__init__(
+            theme,
+            template_path="i3autoconfig/templates/vscode.jinja",
+            target_path="~/.vscode/extensions/autconfig-theme/themes/autconfig-theme-color-theme.json",
+        )
+
+    def render(self):
+        colors = self.theme.color_scheme.colors
+        return self.template.render(**colors)
