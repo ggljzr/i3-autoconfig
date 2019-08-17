@@ -81,9 +81,9 @@ class I3Config:
                 color = default_color
 
             if color_pattern.match(color):
-                self.window_settings["name"] = color
+                self.window_settings[name] = color
             else:
-                self.window_settings["name"] = color_scheme.colors[color]
+                self.window_settings[name] = color_scheme.colors[color]
 
 
 class Wallpaper:

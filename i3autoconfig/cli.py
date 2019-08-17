@@ -15,10 +15,10 @@ def load(theme_path):
     print(theme.name)
     print(theme)
 
-    from .templates import XresTemplate
+    from .templates import I3config
 
-    xres = XresTemplate(theme)
-    print(xres.render())
+    c = I3config(theme)
+    print(c.render())
 
 
 def main():
