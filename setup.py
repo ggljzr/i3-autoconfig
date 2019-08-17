@@ -20,5 +20,6 @@ setup(
     setup_requires=["pytest-runner"],
     tests_require=["pytest"],
     entry_points={"console_scripts": ["i3-autoconfig = i3autoconfig.cli:main"]},
+    package_data={"i3autoconfig": ["templates/*.jinja"]},
 )
 
