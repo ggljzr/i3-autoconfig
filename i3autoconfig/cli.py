@@ -15,6 +15,11 @@ def load(theme_path):
     print(theme.name)
     print(theme)
 
+    from .templates import XresTemplate
+
+    xres = XresTemplate(theme)
+    print(xres.render())
+
 
 def main():
     i3_autoconfig()
