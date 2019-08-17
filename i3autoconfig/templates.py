@@ -29,3 +29,23 @@ class XresTemplate(Template):
     def render(self):
         colors = self.theme.color_scheme.colors
         return self.template.render(**colors)
+
+
+class I3config(Template):
+    def __init__(self, theme):
+        super().__init__(
+            theme,
+            template_path="i3autoconfig/templates/i3config.jinja",
+            target_path="~/.i3/config",
+        )
+
+    def render(self):
+        i3_config = self.theme.i3_config
+        window_settings = i3_config.window_settings
+
+        return self.template.render(
+            border=i3_config.border,
+            gaps_inner=i3_config.gaps_inner,
+            background=self.theme.color_scheme.colors["background"],
+            **window_settings
+        )

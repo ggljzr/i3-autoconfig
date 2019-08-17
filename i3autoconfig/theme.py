@@ -56,6 +56,21 @@ class I3Config:
 
         color_pattern = re.compile(r"^#[a-fA-F0-9]{6}$")
 
+        try:
+            self.border = data["i3"]["border"]
+        except KeyError:
+            self.border = 0
+
+        try:
+            self.gaps_inner = data["i3"]["gaps-inner"]
+        except KeyError:
+            self.gaps_inner = 0
+
+        try:
+            self.gaps_outer = data["i3"]["gaps-outer"]
+        except KeyError:
+            self.gaps_outer = 0
+
         self.window_settings = dict()
         for w in I3Config.I3_WINDOWS:
             name, default_color = w
