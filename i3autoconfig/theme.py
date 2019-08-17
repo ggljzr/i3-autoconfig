@@ -3,6 +3,7 @@ import re
 from enum import Enum
 
 from .templates import XresTemplate, I3ConfigTemplate, I3BlocksTemplate, VSCodeTemplate
+from .utils import reload
 
 
 class ColorScheme:
@@ -146,3 +147,5 @@ class Theme:
     def apply_theme(self, backup=False):
         for t in self.templates:
             t.apply_template(backup=backup)
+        # reload settings
+        reload()
