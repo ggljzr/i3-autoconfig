@@ -24,6 +24,14 @@ class Template:
     def render(self):
         raise NotImplementedError
 
+    @property
+    def target_folder(self):
+        return self.target_path.parent
+
+    @property
+    def target_name(self):
+        return self.target_path.name
+
     def apply_template(self, backup=False):
         if backup:
             bak_path = self.target_path.with_suffix(".bak")

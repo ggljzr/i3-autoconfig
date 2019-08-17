@@ -13,6 +13,10 @@ from .templates import XresTemplate, I3ConfigTemplate, I3BlocksTemplate, VSCodeT
 from .utils import reload
 
 
+class PreflightCheckError(Exception):
+    pass
+
+
 class ColorScheme:
     """
     Class representing theme's color scheme. This is loaded
@@ -163,7 +167,27 @@ class Theme:
             VSCodeTemplate(self),
         ]
 
+    def preflight_check(self):
+        print("Running theme preflight check...")
+
+        for t in self.templates:
+            folder = t.target_folder
+            if folder.exists():
+                print(
+                    "Found target folder for template '{}': {}".format(
+                        t.target_name, t.target_folder
+                    )
+                )
+            else:
+                raise PreflightCheckError(
+                    "Target folder for template '{}' not found at {}".format(
+                        t.target_name, t.target_folder
+                    )
+                )
+
     def apply_theme(self, backup=False):
+        self.preflight_check()
+
         for t in self.templates:
             t.apply_template(backup=backup)
         # reload settings
