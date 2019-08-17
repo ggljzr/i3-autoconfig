@@ -29,7 +29,11 @@ class Template:
 
             if bak_path.exists:
                 raise BackupFileExists(
-                    "Backup file for {} already exists. \nThis exception is raised to prevent accidental backup overwrite".format(
+                    """
+                    Backup file for {} already exists.
+                    This exception is raised to prevent accidental backup overwrite.
+                    Run with '--no-backup' option to prevent overwriting current backup files.
+                    """.format(
                         self.target_path
                     )
                 )
