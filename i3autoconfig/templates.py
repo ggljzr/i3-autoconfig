@@ -1,4 +1,6 @@
 import jinja2
+import shutil
+from pathlib import Path, PurePath
 
 
 class Template:
@@ -17,13 +19,20 @@ class Template:
     def render(self):
         raise NotImplementedError
 
+    def apply_template(self, backup=False):
+        if backup:
+            bak_path = self.target_path.with_suffix(".bak")
+            shutil.copyfile(self.target_path, bak_path)
+        with open(self.target_path, "w") as f:
+            f.write(self.render())
+
 
 class XresTemplate(Template):
     def __init__(self, theme):
         super().__init__(
             theme,
             template_path="i3autoconfig/templates/xresources.jinja",
-            target_path="~/.Xresources",
+            target_path=Path(Path.home(), ".Xresources"),
         )
 
     def render(self):
@@ -31,12 +40,12 @@ class XresTemplate(Template):
         return self.template.render(**colors)
 
 
-class I3config(Template):
+class I3ConfigTemplate(Template):
     def __init__(self, theme):
         super().__init__(
             theme,
             template_path="i3autoconfig/templates/i3config.jinja",
-            target_path="~/.i3/config",
+            target_path=Path(Path.home(), ".i3", "config"),
         )
 
     def render(self):
@@ -51,12 +60,12 @@ class I3config(Template):
         )
 
 
-class I3blocks(Template):
+class I3BlocksTemplate(Template):
     def __init__(self, theme):
         super().__init__(
             theme,
             template_path="i3autoconfig/templates/i3blocks.jinja",
-            target_path="~/i3blocks.conf",
+            target_path=Path(Path.home(), ".i3blocks.conf"),
         )
 
     def render(self):
@@ -64,12 +73,19 @@ class I3blocks(Template):
         return self.template.render(**colors)
 
 
-class VSCode(Template):
+class VSCodeTemplate(Template):
     def __init__(self, theme):
         super().__init__(
             theme,
             template_path="i3autoconfig/templates/vscode.jinja",
-            target_path="~/.vscode/extensions/autconfig-theme/themes/autconfig-theme-color-theme.json",
+            target_path=Path(
+                Path.home(),
+                ".vscode",
+                "extensions",
+                "autoconfig-theme",
+                "themes",
+                "autoconfig-theme-color-theme.json",
+            ),
         )
 
     def render(self):
