@@ -11,8 +11,9 @@ bindsym $mod+Return exec --no-startup-id urxvt
 
 bindsym $mod+Shift+q kill
 
-#gaps
-for_window [class="^.*"] border pixel {{ border }} #disable window titlebars
+# gaps
+# uncomment this if you use airbladers i3gaps fork
+# for_window [class="^.*"] border pixel {{ border }} #disable window titlebars
 # gaps inner {{ gaps_inner }}
 # gaps outer {{ gaps_outer }}
 
@@ -22,7 +23,7 @@ exec --no-startup-id compton -b
 #run redshift
 exec --no-startup-id redshift-gtk
 
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -p ">>" -nb "{{ background }}" -nf "" -sb "{{ focused }}" -sf "{{ foreground }}" -fn "DejaVu Sans Mono"'
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -p ">>" -nb "{{ background }}" -nf "{{ foreground }}" -sb "{{ focused }}" -sf "{{ foreground }}" -fn "DejaVu Sans Mono"'
 
 # change focus
 bindsym $mod+j focus left
