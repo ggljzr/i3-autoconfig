@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 import sys
 
 if sys.version_info < (3, 7):
-    sys.exit("Sorry, Python < 3.7 is not supported")
+    sys.exit("Sorry, Python < 3.7 is not supported, muh importlib.resources...")
 
 setup(
     name="i3autoconfig",
