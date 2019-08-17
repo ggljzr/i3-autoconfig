@@ -12,19 +12,8 @@ def load(theme_path):
     from .theme import Theme
 
     theme = Theme(theme_path)
-    print(theme.name)
-    print(theme)
-
-    from .templates import I3config, I3blocks, VSCode
-
-    c = I3config(theme)
-    print(c.render())
-
-    b = I3blocks(theme)
-    print(b.render())
-
-    v = VSCode(theme)
-    print(v.render())
+    print("Applying theme: {}", theme.name)
+    theme.apply_theme(backup=False)
 
 
 def main():

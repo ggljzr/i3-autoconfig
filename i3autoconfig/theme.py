@@ -2,6 +2,8 @@ import pytoml
 import re
 from enum import Enum
 
+from .templates import XresTemplate, I3ConfigTemplate, I3BlocksTemplate, VSCodeTemplate
+
 
 class ColorScheme:
     """
@@ -133,3 +135,14 @@ class Theme:
         self.i3_config = I3Config(data, self.color_scheme)
         self.wallpaper = Wallpaper(data)
         self.compton = Compton(data)
+
+        self.templates = [
+            XresTemplate(self),
+            I3ConfigTemplate(self),
+            I3BlocksTemplate(self),
+            VSCodeTemplate(self),
+        ]
+
+    def apply_theme(self, backup=False):
+        for t in self.templates:
+            t.apply_template(backup=backup)
