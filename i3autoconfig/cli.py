@@ -8,12 +8,15 @@ def i3_autoconfig():
 
 @i3_autoconfig.command(help="Loads theme from given .toml file.")
 @click.argument("theme_path")
-def load(theme_path):
+@click.option(
+    "--backup/--no-backup", help="Generates backup files for dotfiles.", default=True
+)
+def load(theme_path, backup):
     from .theme import Theme
 
     theme = Theme(theme_path)
     print("Applying theme: {}", theme.name)
-    theme.apply_theme(backup=True)
+    theme.apply_theme(backup=backup)
 
 
 def main():
