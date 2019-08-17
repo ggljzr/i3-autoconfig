@@ -1,0 +1,73 @@
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+
+command=/usr/local/libexec/i3blocks/$BLOCK_NAME
+separator_block_width=15
+markup=none
+
+[music]
+color={{ darkRed }}
+command=exec ~/.i3/current_song.py
+interval=5
+
+[weather]
+color={{ blue }}
+command=exec ~/.i3/rust-weather ~/.i3/weather.json
+interval=1800
+markup=pango
+
+[memory]
+color={{ green }}
+label=Mem
+#label=  
+separator=false
+interval=30
+
+[disk]
+label=Home
+color={{ green }}
+#label= 
+#instance=/mnt/data
+interval=30
+
+[battery]
+color={{ magenta }}
+label=Batt
+#label= 
+interval=30
+
+[brightness]
+color={{ yellow }}
+interval=1
+label=Shine
+#label=  
+command= printf %.0f `xbright`
+
+[volume]
+color={{ red }}
+label=Vol
+#label=  
+instance=Master
+interval=1
+signal=10
+
+[keyboard layout]
+color={{ cyan }}
+label=
+command= setxkbmap -query | awk '/layout/{print $2}'
+interval=1
+
+[numlock]
+label=
+color={{ cyan }}
+command=bash ~/.i3/num.sh
+interval=1
+markup=pango
+
+[time]
+color={{ foreground }}
+command=LC_TIME=en_US date '+%A %B %d %H:%M'
+interval=50
+

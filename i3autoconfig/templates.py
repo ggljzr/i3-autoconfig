@@ -49,3 +49,16 @@ class I3config(Template):
             background=self.theme.color_scheme.colors["background"],
             **window_settings
         )
+
+
+class I3blocks(Template):
+    def __init__(self, theme):
+        super().__init__(
+            theme,
+            template_path="i3autoconfig/templates/i3blocks.jinja",
+            target_path="~/i3blocks.conf",
+        )
+
+    def render(self):
+        colors = self.theme.color_scheme.colors
+        return self.template.render(**colors)

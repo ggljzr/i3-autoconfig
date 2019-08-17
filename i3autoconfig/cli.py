@@ -15,10 +15,13 @@ def load(theme_path):
     print(theme.name)
     print(theme)
 
-    from .templates import I3config
+    from .templates import I3config, I3blocks
 
     c = I3config(theme)
     print(c.render())
+
+    b = I3blocks(theme)
+    print(b.render())
 
 
 def main():
