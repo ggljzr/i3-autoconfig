@@ -3,6 +3,10 @@ import shutil
 from pathlib import Path, PurePath
 
 
+class BackupFileExists(Exception):
+    pass
+
+
 class Template:
     """
     Base class for representing templates.
@@ -22,6 +26,14 @@ class Template:
     def apply_template(self, backup=False):
         if backup:
             bak_path = self.target_path.with_suffix(".bak")
+
+            if bak_path.exists:
+                raise BackupFileExists(
+                    "Backup file for {} already exists. \nThis exception is raised to prevent accidental backup overwrite".format(
+                        self.target_path
+                    )
+                )
+
             shutil.copyfile(self.target_path, bak_path)
         with open(self.target_path, "w") as f:
             f.write(self.render())

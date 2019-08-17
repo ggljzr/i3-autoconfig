@@ -13,7 +13,7 @@ def load(theme_path):
 
     theme = Theme(theme_path)
     print("Applying theme: {}", theme.name)
-    theme.apply_theme(backup=False)
+    theme.apply_theme(backup=True)
 
 
 def main():
