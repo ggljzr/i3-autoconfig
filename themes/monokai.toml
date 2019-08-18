@@ -35,6 +35,7 @@ foreground = "#ffffff"
     unfocused = "background"
     urgent = "darkRed"
     foreground = "white"
+    wborder = "#333333"
     
 [wallpaper]
     pic = "/home/ggljzr/Pictures/Pictures/000.png"
