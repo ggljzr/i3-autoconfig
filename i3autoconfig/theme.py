@@ -94,7 +94,7 @@ class I3Config:
             except KeyError:
                 color = default_color
 
-            if color_pattern.match(color):
+            if color is None or color_pattern.match(color):
                 self.window_settings[name] = color
             else:
                 self.window_settings[name] = color_scheme.colors[color]

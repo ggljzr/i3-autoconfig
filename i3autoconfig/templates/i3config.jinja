@@ -170,18 +170,18 @@ bar {
 		background {{ background }}
 		statusline {{ foreground }}
 
-		focused_workspace {{ focused }} {{ focused }} {{ foreground }}
-		active_workspace {{ inactive }} {{ inactive }} {{ foreground }}
-		inactive_workspace {{ background }} {{ background }} {{ foreground }}
-		urgent_workspace {{ urgent }} {{ urgent }} {{ foreground }}
+		focused_workspace {{ wborder if wborder else focused }} {{ focused }} {{ foreground }}
+		active_workspace {{ wborder if wborder else inactive }} {{ inactive }} {{ foreground }}
+		inactive_workspace {{ wborder if wborder else inactive }} {{ inactive }} {{ foreground }}
+		urgent_workspace {{ wborder if wborder else urgent }} {{ urgent }} {{ foreground }}
 	}
 }
 
 
 
 # class                  border      backgr.     text         indicator
- client.focused          {{ focused }}  {{ focused }} {{ foreground }} {{ focused }}
- client.focused_inactive {{ inactive }} {{ inactive }} {{ foreground }} {{ inactive }}
- client.unfocused        {{ unfocused }} {{ unfocused }} {{ foreground }} {{ unfocused }}
- client.urgent      	 {{ urgent }} {{ urgent }} {{ foreground }}  {{ urgent }}
+ client.focused          {{ wborder if wborder else focused }}  {{ focused }} {{ foreground }} {{ focused }}
+ client.focused_inactive {{ wborder if wborder else inactive }} {{ inactive }} {{ foreground }} {{ inactive }}
+ client.unfocused        {{ wborder if wborder else unfocused }} {{ unfocused }} {{ foreground }} {{ unfocused }}
+ client.urgent      	 {{ wborder if wborder else urgent }} {{ urgent }} {{ foreground }}  {{ urgent }}
 

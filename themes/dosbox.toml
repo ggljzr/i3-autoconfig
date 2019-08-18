@@ -30,11 +30,12 @@ foreground = "#ffffff"
 
 [i3]
     [i3.windows]
-    focused = "#215d9c"
-    inactive = "darkGrey"
-    unfocused = "darkGrey"
-    urgent = "darkRed"
+    focused = "#285577"
+    inactive = "#222222"
+    unfocused = "#222222"
+    urgent = "#222222"
     foreground = "white"
+    wborder = "#333333"
     
 [wallpaper]
     pic = "/home/ggljzr/Pictures/Pictures/000.png"

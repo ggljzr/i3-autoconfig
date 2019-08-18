@@ -43,8 +43,8 @@ gaps-outer = 0
     #or only some options can be ommitted
     [i3.windows]
     focused = "darkGreen"
-    inactive = "darkGrey"
-    unfocused = "darkGrey"
+    inactive = "background"
+    unfocused = "background"
     urgent = "darkRed"
     foreground = "white"
     
