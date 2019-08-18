@@ -1,6 +1,6 @@
 import jinja2
 import shutil
-from pathlib import Path, PurePath
+from pathlib import Path
 
 from importlib.resources import read_text
 
