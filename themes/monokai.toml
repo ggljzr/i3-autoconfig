@@ -31,8 +31,8 @@ foreground = "#ffffff"
 [i3]
     [i3.windows]
     focused = "darkBlue"
-    inactive = "darkGrey"
-    unfocused = "darkGrey"
+    inactive = "background"
+    unfocused = "background"
     urgent = "darkRed"
     foreground = "white"
     
