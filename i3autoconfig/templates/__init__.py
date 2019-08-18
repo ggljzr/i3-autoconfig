@@ -22,7 +22,8 @@ class Template:
         self.template = jinja2.Template(template_text)
 
     def render(self):
-        raise NotImplementedError
+        colors = self.theme.color_scheme.colors
+        return self.template.render(**colors)
 
     @property
     def target_folder(self):
@@ -60,10 +61,6 @@ class XresTemplate(Template):
             target_path=Path(Path.home(), ".Xresources"),
         )
 
-    def render(self):
-        colors = self.theme.color_scheme.colors
-        return self.template.render(**colors)
-
 
 class I3ConfigTemplate(Template):
     def __init__(self, theme):
@@ -93,10 +90,6 @@ class I3BlocksTemplate(Template):
             target_path=Path(Path.home(), ".i3blocks.conf"),
         )
 
-    def render(self):
-        colors = self.theme.color_scheme.colors
-        return self.template.render(**colors)
-
 
 class VSCodeTemplate(Template):
     def __init__(self, theme):
@@ -112,7 +105,3 @@ class VSCodeTemplate(Template):
                 "autoconfig-theme-color-theme.json",
             ),
         )
-
-    def render(self):
-        colors = self.theme.color_scheme.colors
-        return self.template.render(**colors)
