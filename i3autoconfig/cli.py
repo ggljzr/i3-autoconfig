@@ -1,4 +1,5 @@
 import click
+from pathlib import Path
 
 from .utils import preflight_check
 
@@ -13,7 +14,7 @@ def i3_autoconfig():
 @click.option(
     "--backup/--no-backup", help="Generates backup files for dotfiles.", default=True
 )
-def load(theme_path, backup):
+def load(theme_path: Path, backup: bool):
     from .theme import Theme
 
     preflight_check()

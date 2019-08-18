@@ -8,8 +8,6 @@ from importlib.resources import read_text
 import subprocess
 
 from i3autoconfig import compton_configs
-
-from .templates import XresTemplate, I3ConfigTemplate, I3BlocksTemplate, VSCodeTemplate
 from .utils import reload_settings
 
 
@@ -46,7 +44,7 @@ class ColorScheme:
         "background",
     ]
 
-    def __init__(self, data):
+    def __init__(self, data: dict):
         self.colors = dict()
         for c in ColorScheme.COLORS:
             self.colors[c] = data["colors"][c]
@@ -67,7 +65,7 @@ class I3Config:
         ("wborder", None),
     ]
 
-    def __init__(self, data, color_scheme):
+    def __init__(self, data: dict, color_scheme: ColorScheme):
 
         color_pattern = re.compile(r"^#[a-fA-F0-9]{6}$")
 
@@ -108,7 +106,7 @@ class Wallpaper:
 
     BG_MODES = ["center", "fill", "max", "scale", "tile"]
 
-    def __init__(self, data):
+    def __init__(self, data: dict):
         self.pic = data["wallpaper"]["pic"]
 
         self.mode = "fill"
@@ -131,7 +129,11 @@ class Compton:
 
     SHADOWS = ["mild", "thick", "none"]
 
-    def __init__(self, data, target_path=Path(Path.home(), ".config", "compton.conf")):
+    def __init__(
+        self,
+        data: dict,
+        target_path: Path = Path(Path.home(), ".config", "compton.conf"),
+    ):
         self.shadows = "none"
         self.target_path = target_path
         try:
@@ -150,7 +152,7 @@ class Compton:
 
 
 class Theme:
-    def __init__(self, theme_path):
+    def __init__(self, theme_path: Path):
         with open(theme_path, "r") as theme_file:
             data = pytoml.load(theme_file)
 
@@ -160,6 +162,14 @@ class Theme:
         self.i3_config = I3Config(data, self.color_scheme)
         self.wallpaper = Wallpaper(data)
         self.compton = Compton(data)
+
+        # to avoid circural import when importing theme in templates
+        from .templates import (
+            XresTemplate,
+            I3ConfigTemplate,
+            I3BlocksTemplate,
+            VSCodeTemplate,
+        )
 
         self.templates = [
             XresTemplate(self),
@@ -186,7 +196,7 @@ class Theme:
                     )
                 )
 
-    def apply_theme(self, backup=False):
+    def apply_theme(self, backup: bool = False):
         self.preflight_check()
 
         for t in self.templates:

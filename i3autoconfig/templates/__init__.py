@@ -4,6 +4,8 @@ from pathlib import Path
 
 from importlib.resources import read_text
 
+from ..theme import Theme
+
 
 class BackupFileExists(Exception):
     pass
@@ -14,7 +16,7 @@ class Template:
     Base class for representing templates.
     """
 
-    def __init__(self, theme, template_name, target_path):
+    def __init__(self, theme: Theme, template_name: str, target_path: Path):
         self.theme = theme
         self.target_path = target_path
 
@@ -33,7 +35,7 @@ class Template:
     def target_name(self):
         return self.target_path.name
 
-    def apply_template(self, backup=False):
+    def apply_template(self, backup: bool = False):
         if backup:
             bak_path = self.target_path.with_suffix(".bak")
 
@@ -54,7 +56,7 @@ class Template:
 
 
 class XresTemplate(Template):
-    def __init__(self, theme):
+    def __init__(self, theme: Theme):
         super().__init__(
             theme,
             template_name="xresources.jinja",
@@ -83,7 +85,7 @@ class I3ConfigTemplate(Template):
 
 
 class I3BlocksTemplate(Template):
-    def __init__(self, theme):
+    def __init__(self, theme: Theme):
         super().__init__(
             theme,
             template_name="i3blocks.jinja",
@@ -92,7 +94,7 @@ class I3BlocksTemplate(Template):
 
 
 class VSCodeTemplate(Template):
-    def __init__(self, theme):
+    def __init__(self, theme: Theme):
         super().__init__(
             theme,
             template_name="vscode.jinja",
