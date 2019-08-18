@@ -117,7 +117,7 @@ class Wallpaper:
         except KeyError:
             pass
 
-    def apply(self):
+    def apply(self) -> None:
         print("Applying wallpaper: {}".format(self.pic))
         subprocess.call(["feh", "--bg-{}".format(self.mode), self.pic])
 
@@ -143,7 +143,7 @@ class Compton:
         except KeyError:
             pass
 
-    def apply(self):
+    def apply(self) -> None:
         print("Applying Compton config: {}.conf".format(self.shadows))
 
         config = read_text(compton_configs, "{}.conf".format(self.shadows))
@@ -178,7 +178,7 @@ class Theme:
             VSCodeTemplate(self),
         ]
 
-    def preflight_check(self):
+    def preflight_check(self) -> None:
         print("Running theme preflight check...")
 
         for t in self.templates:
@@ -196,7 +196,7 @@ class Theme:
                     )
                 )
 
-    def apply_theme(self, backup: bool = False):
+    def apply_theme(self, backup: bool = False) -> None:
         self.preflight_check()
 
         for t in self.templates:

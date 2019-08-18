@@ -23,19 +23,19 @@ class Template:
         template_text = read_text(__package__, template_name)
         self.template = jinja2.Template(template_text)
 
-    def render(self):
+    def render(self) -> str:
         colors = self.theme.color_scheme.colors
         return self.template.render(**colors)
 
     @property
-    def target_folder(self):
+    def target_folder(self) -> Path:
         return self.target_path.parent
 
     @property
-    def target_name(self):
+    def target_name(self) -> str:
         return self.target_path.name
 
-    def apply_template(self, backup: bool = False):
+    def apply_template(self, backup: bool = False) -> None:
         if backup:
             bak_path = self.target_path.with_suffix(".bak")
 
@@ -72,7 +72,7 @@ class I3ConfigTemplate(Template):
             target_path=Path(Path.home(), ".i3", "config"),
         )
 
-    def render(self):
+    def render(self) -> str:
         i3_config = self.theme.i3_config
         window_settings = i3_config.window_settings
 

@@ -2,7 +2,7 @@ import subprocess
 from pathlib import Path
 
 
-def reload_settings():
+def reload_settings() -> None:
     # reload settings
     print("Reloading desktop...")
     subprocess.call(["xrdb", "-load", Path(Path.home(), ".Xresources")])
@@ -11,7 +11,7 @@ def reload_settings():
     subprocess.call(["compton", "-b"])
 
 
-def preflight_check():
+def preflight_check() -> None:
     print("Running system preflight check...")
 
     requirements = ["code", "i3", "i3blocks", "xrdb", "compton"]
