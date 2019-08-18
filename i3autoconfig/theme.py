@@ -64,6 +64,7 @@ class I3Config:
         ("unfocused", "darkGrey"),
         ("urgent", "darkRed"),
         ("foreground", "foreground"),
+        ("wborder", None),
     ]
 
     def __init__(self, data, color_scheme):
