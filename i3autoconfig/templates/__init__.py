@@ -36,14 +36,14 @@ class Template:
         if backup:
             bak_path = self.target_path.with_suffix(".bak")
 
-            if bak_path.exists:
+            if bak_path.exists():
                 raise BackupFileExists(
                     """
-                    Backup file for {} already exists.
+                    Backup file {} already exists.
                     This exception is raised to prevent accidental backup overwrite.
                     Run with '--no-backup' option to prevent overwriting current backup files.
                     """.format(
-                        self.target_path
+                        bak_path
                     )
                 )
 
