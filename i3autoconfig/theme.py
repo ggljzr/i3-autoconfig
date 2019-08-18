@@ -120,7 +120,7 @@ class Wallpaper:
             pass
 
     def apply(self):
-        print("Applying wallpaper...")
+        print("Applying wallpaper: {}".format(self.pic))
         subprocess.call(["feh", "--bg-{}".format(self.mode), self.pic])
 
 
@@ -142,7 +142,7 @@ class Compton:
             pass
 
     def apply(self):
-        print("Applying Compton config [{}]".format(self.shadows))
+        print("Applying Compton config: {}.conf".format(self.shadows))
 
         config = read_text(compton_configs, "{}.conf".format(self.shadows))
         with open(self.target_path, "w") as f:
