@@ -10,7 +10,7 @@ import subprocess
 from i3autoconfig import compton_configs
 
 from .templates import XresTemplate, I3ConfigTemplate, I3BlocksTemplate, VSCodeTemplate
-from .utils import reload
+from .utils import reload_settings
 
 
 class PreflightCheckError(Exception):
@@ -194,4 +194,4 @@ class Theme:
         self.compton.apply()
         self.wallpaper.apply()
 
-        reload()
+        reload_settings()

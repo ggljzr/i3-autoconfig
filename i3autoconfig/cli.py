@@ -1,5 +1,7 @@
 import click
 
+from .utils import preflight_check
+
 
 @click.group()
 def i3_autoconfig():
@@ -14,9 +16,16 @@ def i3_autoconfig():
 def load(theme_path, backup):
     from .theme import Theme
 
+    preflight_check()
+
     theme = Theme(theme_path)
     print("Applying theme: ", theme.name)
     theme.apply_theme(backup=backup)
+
+
+@i3_autoconfig.command(help="Checks system for required software.")
+def check():
+    preflight_check()
 
 
 def main():
