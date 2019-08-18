@@ -16,7 +16,7 @@ setup(
     url="https://github.com/ggljzr/i3-autoconfig",
     packages=find_packages(),
     zip_safe=False,
-    install_requires=["click", "pytoml"],
+    install_requires=["click", "pytoml", "jinja2"],
     setup_requires=["pytest-runner"],
     tests_require=["pytest"],
     entry_points={"console_scripts": ["i3-autoconfig = i3autoconfig.cli:main"]},
