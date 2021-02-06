@@ -15,14 +15,6 @@ In python3, configs and color themes in toml.
 * Use [i3gaps](https://github.com/Airblader/i3) fork. (Optional)
 * Custom scripts and dotfiles are [here](https://github.com/ggljzr/i3config) (wildly unorganized).
 
-## Custom template
-Custom template can be added by:
-
-1. Add custom template to template folder
-2. Add add ``template_name`` to ``TEMPLATES`` list in ``autoconfig.py``
-3. Add target path (``template_name = "/path/to/actual/config"``) to ``config.toml`` (paths section)
-
-Note that ``template_name`` in ``TEMPLATES`` and in ``config.toml`` must be same. In your template use ``##colorName##`` tags to specify color (e.g. ``##darkBlue##`` or ``##foreground##``).
 
 ## VS Code theme
 
