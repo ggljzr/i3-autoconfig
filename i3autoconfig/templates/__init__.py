@@ -4,7 +4,10 @@ from pathlib import Path
 
 from importlib.resources import read_text
 
-from ..theme import Theme
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from ..theme import Theme
 
 
 class BackupFileExists(Exception):

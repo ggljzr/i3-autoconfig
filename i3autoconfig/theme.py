@@ -10,6 +10,13 @@ import subprocess
 from i3autoconfig import compton_configs
 from .utils import reload_settings
 
+from .templates import (
+    XresTemplate,
+    I3ConfigTemplate,
+    I3BlocksTemplate,
+    VSCodeTemplate,
+)
+
 
 class PreflightCheckError(Exception):
     pass
@@ -162,14 +169,6 @@ class Theme:
         self.i3_config = I3Config(data, self.color_scheme)
         self.wallpaper = Wallpaper(data)
         self.compton = Compton(data)
-
-        # to avoid circural import when importing theme in templates
-        from .templates import (
-            XresTemplate,
-            I3ConfigTemplate,
-            I3BlocksTemplate,
-            VSCodeTemplate,
-        )
 
         self.templates = [
             XresTemplate(self),
