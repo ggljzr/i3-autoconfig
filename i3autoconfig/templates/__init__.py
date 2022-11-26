@@ -41,7 +41,8 @@ class Template:
         return self.target_path.name
 
     def apply_template(self, backup: bool = False) -> None:
-        if backup:
+        # only make backup if there is something to back up
+        if backup and self.target_path.exists():
             bak_path = self.target_path.with_suffix(".bak")
 
             if bak_path.exists():
