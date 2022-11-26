@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import jinja2
 import shutil
 from pathlib import Path
@@ -69,10 +71,15 @@ class XresTemplate(Template):
 
 class I3ConfigTemplate(Template):
     def __init__(self, theme):
+
+        target_path = Path.home() / ".config/i3/config"
+        if not target_path.exists():
+            target_path = Path.home() / ".i3/config"
+
         super().__init__(
             theme,
             template_name="i3config.jinja",
-            target_path=Path(Path.home(), ".i3", "config"),
+            target_path=target_path,
         )
 
     def render(self) -> str:
