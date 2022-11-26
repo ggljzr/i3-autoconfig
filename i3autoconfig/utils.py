@@ -14,7 +14,7 @@ def reload_settings() -> None:
 def preflight_check() -> None:
     print("Running system preflight check...")
 
-    requirements = ["code", "i3", "i3blocks", "xrdb", "compton"]
+    requirements = ["code", "i3", "i3blocks", "xrdb", "compton", "feh"]
     ok = True
 
     for r in requirements:
