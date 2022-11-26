@@ -38,7 +38,7 @@ foreground = "#ffffff"
     wborder = "#333333"
     
 [wallpaper]
-    pic = "/home/ggljzr/Pictures/Pictures/000.png"
+    pic = "/home/kali/Pictures/000.jpg"
 
 [other]
 shadows = "none" #mild, thick or none
